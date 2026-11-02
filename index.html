@@ -188,6 +188,16 @@
   .bg-dark {
     background: radial-gradient(ellipse at 50% 0%, #4a1f12, #1f0d07 70%); color: #f5e7d6;
   }
+  .bg-dark { position: relative; }
+  .bg-dark::before {
+    content: ""; position: absolute; top: 28px; left: max(24px, calc((100% - var(--max)) / 2 + 16px));
+    width: 150px; aspect-ratio: 832 / 427; pointer-events: none;
+    background: url("assets/logo-casa-intencional-claro.png") left top / contain no-repeat;
+  }
+  @media (max-width: 760px) {
+    .bg-dark { padding-top: 120px; }
+    .bg-dark::before { top: 20px; left: 16px; width: 130px; }
+  }
   .bg-dark h2.sec { color: #fff3e2; }
   .bg-dark h2.sec .b { color: var(--gold-light); }
   .bg-dark .sec-sub { color: #f0dcc4; }
