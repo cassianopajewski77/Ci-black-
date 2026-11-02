@@ -655,7 +655,7 @@ const CONFIG = {
   parcelas: 10,
   valorParcela: 14.66,      // valor da parcela informado pela plataforma (com juros, se houver)
 
-  acesso: "1 ano de acesso ao curso e acesso vitalício ao livro digital.",
+  acesso: "O acesso é vitalício: tanto o curso quanto o livro digital são seus para sempre.",
 
   // Conteúdo do curso (substitua pelos módulos reais)
   modulos: [
@@ -703,7 +703,7 @@ const off = Math.round((1 - CONFIG.precoBlack / total) * 100);
 $("#offer-list").innerHTML = `
   <li><span>Curso Casa Intencional – Da Filosofia ao Método</span><s>${brl(CONFIG.valorCurso)}</s></li>
   <li><span>Livro Digital 30 Dias Intencionais</span><s>${brl(CONFIG.valorLivro)}</s></li>
-  <li><span>Acesso imediato + garantia de 7 dias</span><em class="incl">Incluso</em></li>`;
+  <li><span>Acesso imediato e vitalício + garantia de 7 dias</span><em class="incl">Incluso</em></li>`;
 $("#price-from").innerHTML = `De <s>${brl(total)}</s> por apenas`;
 $("#price-inst").innerHTML = `<small>${CONFIG.parcelas}x</small> ${brl(CONFIG.valorParcela)}`;
 $("#price-cash").textContent = `ou ${brl(CONFIG.precoBlack)} à vista`;
