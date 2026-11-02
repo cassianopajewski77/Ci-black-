@@ -8,6 +8,7 @@
 <meta property="og:title" content="Black Friday Casa Intencional – Combo Exclusivo">
 <meta property="og:description" content="Curso Da Filosofia ao Método + Livro Digital 30 Dias Intencionais. Oferta por tempo limitado.">
 <meta property="og:image" content="assets/combo-black-friday.jpg">
+<link rel="icon" type="image/png" href="assets/favicon.png">
 <meta name="theme-color" content="#7a0a0f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,8 +67,7 @@
 
   /* ---------- Logo ---------- */
   .logo { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; text-decoration: none; color: var(--brown-dark); }
-  .logo svg { width: 56px; height: 56px; }
-  .logo span { font-family: Cinzel, serif; letter-spacing: .32em; font-size: 15px; line-height: 1.15; text-align: center; padding-left: .32em; }
+  .logo img { width: clamp(170px, 20vw, 230px); height: auto; }
 
   /* ---------- Black Friday tag (neon) ---------- */
   .bf-tag { display: inline-block; filter: drop-shadow(0 0 10px rgba(255,40,40,.85)) drop-shadow(0 0 26px rgba(255,30,30,.45)); transform: rotate(-4deg); }
@@ -321,7 +321,8 @@
   .final-img { max-width: 720px; margin: 36px auto 0; border-radius: 22px; overflow: hidden; box-shadow: 0 24px 50px rgba(0,0,0,.4); }
 
   footer { background: #1a0b06; color: #bfa58a; font-size: 13px; padding: 32px 0 110px; text-align: center; }
-  footer .logo { color: #e8d3bb; margin-bottom: 14px; }
+  footer .logo { margin-bottom: 14px; }
+  footer .logo img { width: 160px; }
   footer p { margin: 6px 0; }
 
   /* Barra fixa no celular */
@@ -361,9 +362,8 @@
   <section class="hero" style="padding:0">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <a class="logo" href="#" aria-label="Casa Intencional">
-          <svg><use href="#i-logo"/></svg>
-          <span>CASA<br>INTENCIONAL</span>
+        <a class="logo" href="#">
+          <img src="assets/logo-casa-intencional.png" alt="Casa Intencional" width="832" height="427">
         </a>
         <h1><span class="a">Da Filosofia</span><span class="b">ao Método</span></h1>
         <hr class="rule">
@@ -611,7 +611,7 @@
 
 <footer>
   <div class="wrap">
-    <div class="logo"><svg width="44" height="44"><use href="#i-logo"/></svg><span>CASA<br>INTENCIONAL</span></div>
+    <div class="logo"><img src="assets/logo-casa-intencional-claro.png" alt="Casa Intencional" width="832" height="427" loading="lazy"></div>
     <p>© <span data-year>2026</span> Casa Intencional · Monica Pajewski. Todos os direitos reservados.</p>
     <p>Os resultados variam de pessoa para pessoa e dependem da aplicação do conteúdo.</p>
   </div>
