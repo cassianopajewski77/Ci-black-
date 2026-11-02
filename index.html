@@ -3,460 +3,744 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Black Friday Casa Intencional</title>
-<meta name="description" content="Black Friday Casa Intencional: menos coisas, mais intenção. Ofertas selecionadas para uma casa com propósito.">
+<title>Black Friday Casa Intencional | Da Filosofia ao Método</title>
+<meta name="description" content="Combo exclusivo de Black Friday: Curso Casa Intencional – Da Filosofia ao Método + Livro Digital 30 Dias Intencionais. Sua casa como aliada da vida que deseja viver.">
+<meta property="og:title" content="Black Friday Casa Intencional – Combo Exclusivo">
+<meta property="og:description" content="Curso Da Filosofia ao Método + Livro Digital 30 Dias Intencionais. Oferta por tempo limitado.">
+<meta property="og:image" content="assets/combo-black-friday.jpg">
+<meta name="theme-color" content="#7a0a0f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0e0d0b;
-    --bg-2: #171512;
-    --card: #1d1a16;
-    --line: #2e2a24;
-    --text: #f3ede4;
-    --muted: #a99f91;
-    --accent: #d08c5b;      /* terracota */
-    --accent-2: #e9c9a6;    /* areia */
-    --ok: #9cc59a;
-    --radius: 14px;
-    --max: 1120px;
+    /* Paleta extraída dos criativos */
+    --cream: #f7ecdf;
+    --cream-2: #efdcc6;
+    --sand: #e6cdb0;
+    --brown: #7b3a1d;        /* "DA FILOSOFIA" */
+    --brown-dark: #4a2a17;   /* logo / traços */
+    --ink: #22170f;          /* "AO MÉTODO" */
+    --text: #3b2a1e;
+    --muted: #7a6656;
+    --gold: #e2a530;
+    --gold-light: #f6d27a;
+    --gold-deep: #b9801c;
+    --red: #c4141c;
+    --red-deep: #6e080d;
+    --red-neon: #ff3030;
+    --black-tag: #1a0506;
+    --max: 1160px;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    margin: 0; background: var(--bg); color: var(--text);
-    font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    -webkit-font-smoothing: antialiased;
+    margin: 0; background: var(--cream); color: var(--text);
+    font: 17px/1.65 Montserrat, system-ui, sans-serif; -webkit-font-smoothing: antialiased;
   }
+  img { max-width: 100%; height: auto; display: block; }
   a { color: inherit; }
   .wrap { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
-  .serif { font-family: Fraunces, Georgia, serif; }
+  .center { text-align: center; }
 
-  /* Barra de anúncio */
-  .announce {
-    background: var(--accent); color: #1a0f07; text-align: center;
-    font-size: 14px; font-weight: 600; padding: 8px 16px; letter-spacing: .02em;
+  /* ---------- Tipografia dos criativos ---------- */
+  .t-cinzel { font-family: Cinzel, "Trajan Pro", Georgia, serif; letter-spacing: .01em; }
+  .t-italic { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-weight: 500; }
+  .kicker { font-family: Cinzel, serif; letter-spacing: .32em; font-size: 13px; color: var(--brown-dark); text-transform: uppercase; }
+  .rule { width: 120px; height: 2px; background: var(--brown); margin: 16px auto; border: 0; }
+  h2.sec {
+    font-family: Cinzel, serif; font-weight: 600; color: var(--ink);
+    font-size: clamp(28px, 4.4vw, 46px); line-height: 1.1; margin: 10px 0 0;
+  }
+  h2.sec .b { color: var(--brown); }
+  .sec-sub { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: clamp(20px, 2.4vw, 26px); color: var(--text); margin: 6px auto 0; max-width: 34ch; line-height: 1.3; }
+
+  /* ---------- Barra de urgência ---------- */
+  .urgency {
+    position: sticky; top: 0; z-index: 30;
+    background: linear-gradient(90deg, var(--red-deep), #9c0d14 50%, var(--red-deep));
+    color: #fff; font-weight: 700; font-size: 14px; text-align: center; padding: 9px 12px;
+    box-shadow: 0 2px 18px rgba(196,20,28,.45);
+  }
+  .urgency .cd-inline { font-variant-numeric: tabular-nums; color: var(--gold-light); margin-left: 6px; white-space: nowrap; }
+
+  /* ---------- Logo ---------- */
+  .logo { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; text-decoration: none; color: var(--brown-dark); }
+  .logo svg { width: 56px; height: 56px; }
+  .logo span { font-family: Cinzel, serif; letter-spacing: .32em; font-size: 15px; line-height: 1.15; text-align: center; padding-left: .32em; }
+
+  /* ---------- Black Friday tag (neon) ---------- */
+  .bf-tag { display: inline-block; filter: drop-shadow(0 0 10px rgba(255,40,40,.85)) drop-shadow(0 0 26px rgba(255,30,30,.45)); transform: rotate(-4deg); }
+  .bf-tag .outer {
+    clip-path: polygon(16% 0, 100% 0, 100% 100%, 16% 100%, 0 50%);
+    background: linear-gradient(135deg, #ff6a5e, var(--red-neon) 40%, #b40d12);
+    padding: 4px;
+  }
+  .bf-tag .inner {
+    clip-path: polygon(16% 0, 100% 0, 100% 100%, 16% 100%, 0 50%);
+    background: radial-gradient(circle at 60% 40%, #3a0709, var(--black-tag) 70%);
+    padding: 14px 30px 14px 76px; position: relative;
+    font-family: Montserrat, sans-serif; font-weight: 900; line-height: .92; text-transform: uppercase;
+  }
+  .bf-tag .inner::before {
+    content: ""; position: absolute; left: 34px; top: 50%; width: 18px; height: 18px; margin-top: -9px;
+    border-radius: 50%; border: 3px solid var(--red-neon); box-shadow: 0 0 8px var(--red-neon);
+  }
+  .bf-tag .l1 { display: block; font-size: clamp(40px, 6vw, 64px); background: linear-gradient(180deg, #fff1b8, var(--gold-light) 35%, var(--gold) 70%, var(--gold-deep)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .bf-tag .l2 { display: block; font-size: clamp(40px, 6vw, 64px); color: #fff; }
+
+  /* ---------- Faixa dourada "pincel" ---------- */
+  .brush {
+    display: inline-block; position: relative; padding: 10px 34px;
+    font-family: Montserrat, sans-serif; font-weight: 800; text-transform: uppercase; color: #24160b;
+    font-size: clamp(20px, 2.6vw, 30px); letter-spacing: .01em; transform: rotate(-2deg);
+  }
+  .brush::before {
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background: linear-gradient(90deg, rgba(226,165,48,0) 0%, #e9b544 8%, var(--gold-light) 45%, #e7b13f 85%, rgba(226,165,48,0) 100%);
+    clip-path: polygon(3% 18%, 12% 4%, 40% 10%, 70% 0, 97% 8%, 100% 40%, 96% 92%, 70% 100%, 38% 92%, 10% 100%, 0 70%);
   }
 
-  /* Header */
-  header { border-bottom: 1px solid var(--line); }
-  .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 16px; }
-  .logo { font-family: Fraunces, serif; font-size: 22px; font-weight: 500; text-decoration: none; letter-spacing: -.01em; }
-  .logo span { color: var(--accent); }
-  .nav nav { display: flex; gap: 24px; font-size: 14px; color: var(--muted); }
-  .nav nav a { text-decoration: none; }
-  .nav nav a:hover { color: var(--text); }
-  @media (max-width: 720px) { .nav nav { display: none; } }
+  /* ---------- Pílula vermelha (combo / CTA) ---------- */
+  .pill-red {
+    display: inline-flex; align-items: center; gap: 14px; flex-wrap: wrap; justify-content: center;
+    background: linear-gradient(180deg, #a90f17, var(--red-deep));
+    border: 2px solid rgba(255,110,100,.65); border-radius: 22px;
+    box-shadow: 0 0 22px rgba(255,40,40,.45), inset 0 1px 0 rgba(255,255,255,.18);
+    color: #fff; padding: 12px 22px; font-weight: 800; text-transform: uppercase; line-height: 1.05;
+  }
+  .pill-red svg { width: 40px; height: 40px; flex: none; }
+  .pill-red .plus { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(180deg, var(--gold-light), var(--gold)); color: var(--red-deep); display: grid; place-items: center; font-size: 26px; font-weight: 900; }
+  .pill-red .stack { font-size: 15px; }
+  @media (max-width: 480px) {
+    .pill-red { gap: 8px; padding: 10px 12px; flex-wrap: nowrap; border-radius: 18px; }
+    .pill-red svg { width: 26px; height: 26px; }
+    .pill-red .stack { font-size: 12px; }
+    .pill-red .stack span { font-size: 10px !important; }
+    .pill-red .plus { width: 26px; height: 26px; font-size: 20px; }
+  }
 
-  .btn {
-    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-    background: var(--accent); color: #1a0f07; border: 0; border-radius: 999px;
-    padding: 14px 26px; font: 600 15px/1 Inter, sans-serif; text-decoration: none; cursor: pointer;
-    transition: transform .15s ease, background .15s ease;
+  .cta {
+    display: inline-flex; align-items: center; justify-content: center; gap: 14px; text-decoration: none;
+    background: linear-gradient(180deg, #e01b24, #a10d14 55%, var(--red-deep));
+    border: 2px solid rgba(255,140,120,.75); border-radius: 999px;
+    box-shadow: 0 0 0 4px rgba(255,255,255,.08), 0 0 26px rgba(255,40,40,.55), 0 10px 24px rgba(110,8,13,.35);
+    color: #fff; padding: 18px 34px; text-align: left;
+    font: italic 900 clamp(17px, 2.1vw, 22px)/1.05 Montserrat, sans-serif; text-transform: uppercase; letter-spacing: .01em;
+    transition: transform .15s ease, box-shadow .15s ease; cursor: pointer;
   }
-  .btn:hover { background: var(--accent-2); transform: translateY(-1px); }
-  .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); }
-  .btn.ghost:hover { border-color: var(--muted); background: transparent; }
-  .btn.sm { padding: 10px 18px; font-size: 14px; }
+  .cta:hover { transform: translateY(-2px) scale(1.01); box-shadow: 0 0 0 4px rgba(255,255,255,.1), 0 0 36px rgba(255,40,40,.7), 0 14px 28px rgba(110,8,13,.4); }
+  .cta svg { width: 40px; height: 40px; flex: none; }
+  .cta small { display: block; font: 600 12px/1.3 Montserrat, sans-serif; font-style: normal; text-transform: none; opacity: .9; margin-top: 4px; }
+  .cta.pulse { animation: pulse 2.2s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 4px rgba(255,255,255,.08), 0 0 22px rgba(255,40,40,.45), 0 10px 24px rgba(110,8,13,.35); } 50% { box-shadow: 0 0 0 4px rgba(255,255,255,.08), 0 0 42px rgba(255,40,40,.8), 0 10px 24px rgba(110,8,13,.35); } }
+  .safe { font-size: 13px; color: var(--muted); margin-top: 12px; display: flex; align-items: center; gap: 8px; justify-content: center; flex-wrap: wrap; }
+  .safe svg { width: 16px; height: 16px; }
 
-  /* Hero */
-  .hero { padding: 88px 0 72px; position: relative; overflow: hidden; }
-  .hero::before {
-    content: ""; position: absolute; inset: auto -20% -60% auto; width: 720px; height: 720px;
-    background: radial-gradient(circle, rgba(208,140,91,.22), transparent 65%); pointer-events: none;
+  /* ---------- Checks dourados ---------- */
+  .checks { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  .checks li { display: flex; gap: 12px; align-items: flex-start; }
+  .checks li::before {
+    content: ""; flex: none; width: 24px; height: 24px; margin-top: 2px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 13l6 6L21 4' fill='none' stroke='%23e2a530' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
   }
-  .eyebrow { text-transform: uppercase; letter-spacing: .18em; font-size: 12px; color: var(--accent); font-weight: 600; }
-  .hero h1 {
-    font-family: Fraunces, serif; font-weight: 300; font-size: clamp(44px, 8vw, 96px);
-    line-height: 1; letter-spacing: -.03em; margin: 18px 0 22px; max-width: 14ch;
-  }
-  .hero h1 em { font-style: italic; color: var(--accent-2); }
-  .hero p.lead { font-size: clamp(17px, 2vw, 20px); color: var(--muted); max-width: 52ch; margin: 0 0 32px; }
-  .hero .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .checks.big li { font-family: Montserrat, sans-serif; font-style: italic; font-weight: 600; font-size: 22px; color: var(--ink); }
 
-  /* Countdown */
-  .countdown { display: flex; gap: 12px; margin-top: 48px; flex-wrap: wrap; }
-  .cd-box {
-    background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius);
-    min-width: 88px; padding: 14px 16px; text-align: center;
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative; overflow: hidden;
+    background:
+      radial-gradient(ellipse at 75% 30%, rgba(255,240,215,.95), transparent 55%),
+      radial-gradient(ellipse at 10% 90%, rgba(214,168,118,.35), transparent 50%),
+      linear-gradient(180deg, var(--cream), var(--cream-2));
   }
-  .cd-box b { display: block; font-family: Fraunces, serif; font-size: 36px; font-weight: 500; line-height: 1.1; font-variant-numeric: tabular-nums; }
-  .cd-box small { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .12em; }
-  .cd-label { color: var(--muted); font-size: 14px; margin-top: 12px; }
+  .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; align-items: end; gap: 12px; min-height: 640px; }
+  .hero-copy { padding: 48px 0 56px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .hero h1 { margin: 22px 0 0; font-family: Cinzel, serif; font-weight: 600; line-height: .98; }
+  .hero h1 .a { display: block; color: var(--brown); font-size: clamp(42px, 6.2vw, 78px); }
+  .hero h1 .b { display: block; color: var(--ink); font-size: clamp(42px, 6.2vw, 78px); }
+  .hero .tagline { font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 500; font-size: clamp(24px, 3vw, 34px); line-height: 1.18; color: var(--ink); margin: 0; }
+  .hero .bf-row { margin-top: 34px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .hero .cta { margin-top: 26px; }
+  .hero-photo { align-self: stretch; position: relative; display: flex; align-items: flex-end; }
+  .hero-photo img {
+    width: 100%; height: 100%; max-height: 860px; object-fit: cover; object-position: 50% 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 14%, #000 88%, transparent), linear-gradient(180deg, transparent 0, #000 14%, #000 86%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(90deg, transparent 0, #000 14%, #000 88%, transparent), linear-gradient(180deg, transparent 0, #000 14%, #000 86%, transparent);
+    mask-composite: intersect;
+  }
+  .hero-photo .name {
+    position: absolute; left: 8%; bottom: 7%; background: rgba(247,236,223,.92); border-radius: 14px; padding: 10px 16px;
+    box-shadow: 0 8px 22px rgba(74,42,23,.18); font-size: 13px; color: var(--muted);
+  }
+  .hero-photo .name b { display: block; font-family: Cinzel, serif; color: var(--ink); font-size: 16px; }
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; min-height: 0; }
+    .hero-copy { padding: 36px 0 8px; }
+    .hero-photo { max-width: 460px; margin: 0 auto; order: 2; }
+    .hero-photo img { height: auto; -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 12%, #000 86%, transparent); mask-image: linear-gradient(180deg, transparent 0, #000 12%, #000 86%, transparent); }
+  }
 
-  section { padding: 80px 0; }
-  .section-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 36px; flex-wrap: wrap; }
-  .section-head h2 { font-family: Fraunces, serif; font-weight: 400; font-size: clamp(30px, 4.5vw, 48px); line-height: 1.1; margin: 8px 0 0; letter-spacing: -.02em; }
-  .section-head p { color: var(--muted); max-width: 44ch; margin: 0; }
+  /* ---------- Seções ---------- */
+  section { padding: clamp(64px, 9vw, 104px) 0; }
+  .bg-cream2 { background: linear-gradient(180deg, var(--cream-2), var(--cream)); }
+  .bg-dark {
+    background: radial-gradient(ellipse at 50% 0%, #4a1f12, #1f0d07 70%); color: #f5e7d6;
+  }
+  .bg-dark h2.sec { color: #fff3e2; }
+  .bg-dark h2.sec .b { color: var(--gold-light); }
+  .bg-dark .sec-sub { color: #f0dcc4; }
 
-  /* Filtros */
-  .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
-  .chip {
-    background: transparent; color: var(--muted); border: 1px solid var(--line); border-radius: 999px;
-    padding: 8px 16px; font: 500 14px Inter, sans-serif; cursor: pointer;
-  }
-  .chip[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+  /* Dores */
+  .pains { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 44px; }
+  .pain { background: rgba(255,255,255,.55); border: 1px solid #e3cdb3; border-radius: 16px; padding: 22px; }
+  .pain b { display: block; color: var(--brown); font-family: Cinzel, serif; font-size: 18px; margin-bottom: 4px; }
+  .pain p { margin: 0; font-size: 15px; color: var(--text); }
+  .turn { margin: 48px auto 0; max-width: 760px; text-align: center; font-family: "Cormorant Garamond", serif; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.35; color: var(--ink); }
+  .turn em { color: var(--brown); }
 
-  /* Produtos */
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
-  .card {
-    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-    overflow: hidden; display: flex; flex-direction: column; transition: border-color .2s ease, transform .2s ease;
+  /* Benefícios (ícones dourados dos criativos) */
+  .benefits { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 48px; }
+  .benefit { text-align: center; padding: 8px 18px; }
+  .benefit + .benefit { border-left: 1px solid rgba(226,165,48,.35); }
+  .benefit svg { width: 62px; height: 62px; margin: 0 auto 12px; }
+  .benefit h3 { margin: 0 0 6px; font-size: 21px; font-weight: 600; color: #fff; }
+  .benefit p { margin: 0; font-size: 15px; color: #e8d3bb; }
+  @media (max-width: 820px) {
+    .benefits { grid-template-columns: 1fr 1fr; row-gap: 32px; }
+    .benefit:nth-child(3) { border-left: 0; }
   }
-  .card:hover { border-color: #4a4239; transform: translateY(-2px); }
-  .thumb { aspect-ratio: 4/3; position: relative; display: grid; place-items: center; }
-  .thumb img { width: 100%; height: 100%; object-fit: cover; }
-  .thumb svg { width: 42%; height: auto; opacity: .85; }
-  .badge {
-    position: absolute; top: 12px; left: 12px; background: var(--accent); color: #1a0f07;
-    font-weight: 700; font-size: 13px; padding: 4px 10px; border-radius: 999px;
-  }
-  .card-body { padding: 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
-  .card-cat { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
-  .card h3 { font-family: Fraunces, serif; font-weight: 500; font-size: 20px; margin: 0; line-height: 1.25; }
-  .card .why { color: var(--muted); font-size: 14px; margin: 0; }
-  .price { display: flex; align-items: baseline; gap: 10px; margin-top: auto; padding-top: 10px; }
-  .price s { color: var(--muted); font-size: 14px; }
-  .price b { font-size: 22px; font-weight: 600; }
-  .card .btn { margin-top: 12px; width: 100%; }
 
-  /* Manifesto */
-  .manifesto { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; }
-  .pillar { border-top: 1px solid var(--line); padding-top: 20px; }
-  .pillar .n { font-family: Fraunces, serif; color: var(--accent); font-size: 14px; }
-  .pillar h3 { font-family: Fraunces, serif; font-weight: 500; font-size: 22px; margin: 6px 0 8px; }
-  .pillar p { color: var(--muted); margin: 0; font-size: 15px; }
+  /* O que você recebe */
+  .items { display: grid; gap: 28px; margin-top: 48px; }
+  .item {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch;
+    background: #fffaf3; border: 1px solid #e6d0b6; border-radius: 24px; overflow: hidden;
+    box-shadow: 0 18px 40px rgba(74,42,23,.10);
+  }
+  .item.rev .item-img { order: 2; }
+  .item-img { background: var(--cream-2); }
+  .item-img img { width: 100%; height: 100%; object-fit: cover; }
+  .item-body { padding: clamp(24px, 4vw, 44px); display: flex; flex-direction: column; justify-content: center; }
+  .item-tag { display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; background: linear-gradient(180deg, #a90f17, var(--red-deep)); color: #fff; border-radius: 999px; padding: 6px 14px; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+  .item-tag svg { width: 18px; height: 18px; }
+  .item h3 { font-family: Cinzel, serif; font-weight: 600; color: var(--ink); font-size: clamp(24px, 3vw, 32px); line-height: 1.1; margin: 16px 0 4px; }
+  .item h3 .b { color: var(--brown); }
+  .item .sub { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 22px; color: var(--text); margin: 0 0 16px; }
+  .item .checks li { font-size: 16px; }
+  .item .value { margin-top: 18px; font-size: 14px; color: var(--muted); }
+  .item .value s { color: var(--brown); font-weight: 700; }
+  .feat-row { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 18px; padding-top: 18px; border-top: 1px solid #e6d0b6; }
+  .feat { display: flex; align-items: center; gap: 10px; font-family: "Cormorant Garamond", serif; font-size: 18px; font-weight: 600; color: var(--brown-dark); line-height: 1.1; }
+  .feat svg { width: 34px; height: 34px; flex: none; }
+  @media (max-width: 820px) { .item { grid-template-columns: 1fr; } .item.rev .item-img { order: 0; } }
 
-  /* Lista VIP */
-  .vip {
-    background: linear-gradient(135deg, #2a1a10, #17120d 60%); border: 1px solid #3b2a1d;
-    border-radius: 24px; padding: clamp(28px, 5vw, 56px);
-    display: grid; grid-template-columns: 1.1fr 1fr; gap: 36px; align-items: center;
+  /* Para quem */
+  .forwho { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 44px; }
+  .box { border-radius: 20px; padding: 28px; }
+  .box.yes { background: #fffaf3; border: 1px solid #e6d0b6; }
+  .box.no { background: transparent; border: 1px dashed #cfb393; }
+  .box h3 { font-family: Cinzel, serif; margin: 0 0 16px; font-size: 22px; color: var(--ink); }
+  .box.no ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; color: var(--muted); }
+  .box.no li::before { content: "✕"; color: var(--red); font-weight: 800; margin-right: 10px; }
+  @media (max-width: 760px) { .forwho { grid-template-columns: 1fr; } }
+
+  /* Autora */
+  .author { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(24px, 5vw, 64px); align-items: center; }
+  .author-photo { border-radius: 24px; overflow: hidden; box-shadow: 0 24px 50px rgba(74,42,23,.22); }
+  .author h2 { text-align: left; }
+  .author p { margin: 14px 0 0; }
+  .author .sig { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 28px; color: var(--brown); margin-top: 22px; }
+  @media (max-width: 820px) { .author { grid-template-columns: 1fr; } .author-photo { max-width: 420px; margin: 0 auto; } }
+
+  /* Depoimentos */
+  .testis { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 40px; }
+  .testi { background: #fffaf3; border: 1px solid #e6d0b6; border-radius: 18px; padding: 24px; }
+  .testi p { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 21px; line-height: 1.35; margin: 0 0 14px; color: var(--ink); }
+  .testi b { font-size: 14px; color: var(--brown); }
+  .stars { color: var(--gold); letter-spacing: 2px; margin-bottom: 8px; }
+
+  /* Oferta */
+  .offer-card {
+    max-width: 980px; margin: 44px auto 0; display: grid; grid-template-columns: 1fr 1fr;
+    background: linear-gradient(180deg, #fffaf3, #f6e7d4); color: var(--text);
+    border-radius: 28px; overflow: hidden; border: 2px solid var(--gold);
+    box-shadow: 0 0 0 6px rgba(226,165,48,.18), 0 30px 60px rgba(0,0,0,.45);
   }
-  @media (max-width: 820px) { .vip { grid-template-columns: 1fr; } }
-  .vip h2 { font-family: Fraunces, serif; font-weight: 400; font-size: clamp(30px, 4.5vw, 44px); line-height: 1.1; margin: 8px 0 12px; }
-  .vip p { color: var(--muted); margin: 0; }
-  .vip ul { margin: 16px 0 0; padding-left: 18px; color: var(--accent-2); }
-  form.lead-form { display: grid; gap: 12px; }
-  .field label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
-  .field input {
-    width: 100%; background: rgba(0,0,0,.35); border: 1px solid #3b2a1d; color: var(--text);
-    border-radius: 10px; padding: 14px; font: 16px Inter, sans-serif;
-  }
-  .field input:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
-  .consent { font-size: 12px; color: var(--muted); }
-  .form-msg { font-size: 14px; min-height: 1.4em; }
-  .form-msg.ok { color: var(--ok); }
-  .form-msg.err { color: #e59a8a; }
+  .offer-card .img img { width: 100%; height: 100%; object-fit: cover; }
+  .offer-body { padding: clamp(24px, 4vw, 40px); display: flex; flex-direction: column; }
+  .offer-body .brush { align-self: center; font-size: 20px; margin-bottom: 18px; }
+  .offer-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .offer-list li { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px dashed #dcc2a3; padding-bottom: 10px; font-size: 15px; }
+  .offer-list li span:first-child { display: flex; gap: 10px; }
+  .offer-list li span:first-child::before { content: ""; flex: none; width: 20px; height: 20px; margin-top: 2px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 13l6 6L21 4' fill='none' stroke='%23e2a530' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat; }
+  .offer-list li s { color: var(--muted); white-space: nowrap; }
+  .total { text-align: center; margin-top: 18px; }
+  .total .from { color: var(--muted); font-size: 15px; }
+  .total .from s { color: var(--brown); font-weight: 700; }
+  .total .inst { font-family: Montserrat, sans-serif; font-weight: 900; color: var(--ink); font-size: clamp(34px, 5vw, 48px); line-height: 1.05; margin: 4px 0 0; }
+  .total .inst small { font-size: .45em; font-weight: 700; vertical-align: middle; }
+  .total .cash { font-size: 15px; color: var(--text); }
+  .total .save { display: inline-block; margin-top: 10px; background: var(--ink); color: var(--gold-light); font-weight: 800; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; }
+  .offer-body .cta { margin-top: 20px; width: 100%; justify-content: center; }
+  .pay { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 14px; }
+  .pay span { font-size: 12px; font-weight: 700; color: var(--brown-dark); border: 1px solid #dcc2a3; border-radius: 6px; padding: 4px 8px; background: #fff; }
+  @media (max-width: 820px) { .offer-card { grid-template-columns: 1fr; } }
+
+  /* Contador grande */
+  .countdown { display: flex; justify-content: center; gap: 10px; margin-top: 32px; }
+  .cd { min-width: 82px; text-align: center; border-radius: 14px; padding: 12px 10px; background: rgba(0,0,0,.35); border: 1px solid rgba(255,80,70,.55); box-shadow: 0 0 16px rgba(255,40,40,.25); }
+  .cd b { display: block; font: 900 34px/1 Montserrat, sans-serif; color: #fff; font-variant-numeric: tabular-nums; }
+  .cd small { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-light); }
+  .cd-note { text-align: center; color: #f0dcc4; font-size: 14px; margin-top: 10px; }
+  @media (max-width: 420px) { .cd { min-width: 0; flex: 1; } .cd b { font-size: 26px; } }
+
+  /* Garantia */
+  .guarantee { display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: center; max-width: 880px; margin: 0 auto; }
+  .seal { width: 170px; height: 170px; border-radius: 50%; display: grid; place-items: center; text-align: center;
+    background: radial-gradient(circle at 35% 30%, #fbe6a8, var(--gold) 55%, var(--gold-deep));
+    box-shadow: 0 0 0 6px #f7ecdf, 0 0 0 8px var(--gold), 0 18px 34px rgba(74,42,23,.25);
+    color: var(--brown-dark); font-family: Cinzel, serif; font-weight: 700; line-height: 1; }
+  .seal b { display: block; font-size: 58px; }
+  .seal span { font-size: 14px; letter-spacing: .12em; }
+  .guarantee h2 { text-align: left; }
+  @media (max-width: 680px) { .guarantee { grid-template-columns: 1fr; justify-items: center; text-align: center; } .guarantee h2 { text-align: center; } }
 
   /* FAQ */
-  .faq { max-width: 760px; }
-  details { border-bottom: 1px solid var(--line); padding: 18px 0; }
-  summary { cursor: pointer; font-weight: 500; font-size: 17px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  .faq { max-width: 820px; margin: 40px auto 0; }
+  details { background: #fffaf3; border: 1px solid #e6d0b6; border-radius: 14px; padding: 18px 22px; margin-bottom: 12px; }
+  summary { cursor: pointer; list-style: none; font-weight: 700; color: var(--ink); display: flex; justify-content: space-between; gap: 16px; }
   summary::-webkit-details-marker { display: none; }
-  summary::after { content: "+"; color: var(--accent); font-size: 22px; line-height: 1; }
+  summary::after { content: "+"; color: var(--red); font-size: 24px; line-height: 1; font-weight: 800; }
   details[open] summary::after { content: "–"; }
-  details p { color: var(--muted); margin: 10px 0 0; }
+  details p { margin: 10px 0 0; color: var(--text); font-size: 16px; }
 
-  footer { border-top: 1px solid var(--line); padding: 40px 0; color: var(--muted); font-size: 14px; }
-  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  /* Final */
+  .final { text-align: center; }
+  .final-img { max-width: 720px; margin: 36px auto 0; border-radius: 22px; overflow: hidden; box-shadow: 0 24px 50px rgba(0,0,0,.4); }
 
-  /* WhatsApp flutuante */
-  .wa {
-    position: fixed; right: 16px; bottom: 16px; width: 56px; height: 56px; border-radius: 50%;
-    background: #25d366; display: grid; place-items: center; box-shadow: 0 8px 24px rgba(0,0,0,.4); z-index: 10;
+  footer { background: #1a0b06; color: #bfa58a; font-size: 13px; padding: 32px 0 110px; text-align: center; }
+  footer .logo { color: #e8d3bb; margin-bottom: 14px; }
+  footer p { margin: 6px 0; }
+
+  /* Barra fixa no celular */
+  .sticky-cta {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(26,11,6,.96); backdrop-filter: blur(6px); display: none; align-items: center; gap: 12px;
+    transform: translateY(110%); transition: transform .25s ease;
   }
-  .wa svg { width: 28px; height: 28px; fill: #fff; }
+  .sticky-cta.show { transform: none; }
+  .sticky-cta .p { color: #fff; font-size: 12px; line-height: 1.2; }
+  .sticky-cta .p b { display: block; font-size: 17px; color: var(--gold-light); }
+  .sticky-cta .cta { padding: 12px 18px; font-size: 15px; flex: 1; justify-content: center; }
+  @media (max-width: 760px) { .sticky-cta { display: flex; } }
 
-  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } .reveal { opacity: 1; transform: none; } }
 </style>
 </head>
 <body>
 
-<div class="announce" id="announce">Black Friday Casa Intencional · de 27/11 a 30/11 · cadastre-se e tenha acesso antecipado</div>
+<!-- Ícones reutilizáveis -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-logo" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M8 30 32 8l24 22"/><path d="M44 19V11h6v13.5"/><path d="M14 25v31h36V25"/><path d="M32 48c0-7 0-11-8-15 0 8 3 12 8 15Z"/><path d="M32 48c0-7 0-11 8-15 0 8-3 12-8 15Z"/></g></symbol>
+  <symbol id="i-play" viewBox="0 0 48 40"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"><rect x="6" y="3" width="36" height="25" rx="2"/><path d="M2 33h44l-3 4H5z"/><path d="M20 10v11l9-5.5z" fill="currentColor"/></g></symbol>
+  <symbol id="i-book" viewBox="0 0 48 40"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"><path d="M24 8c-6-4-13-4-20-2v28c7-2 14-2 20 2 6-4 13-4 20-2V6c-7-2-14-2-20 2Z"/><path d="M24 8v28"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><circle cx="24" cy="26" r="16"/><path d="M24 17v10l6 4M8 10l6-5M40 10l-6-5M14 44l3-4M34 44l-3-4"/></g></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></g></symbol>
+</svg>
 
-<header>
-  <div class="wrap nav">
-    <a class="logo" href="#">Casa <span>Intencional</span></a>
-    <nav aria-label="Principal">
-      <a href="#ofertas">Ofertas</a>
-      <a href="#manifesto">Nossa Black</a>
-      <a href="#vip">Lista VIP</a>
-      <a href="#faq">Dúvidas</a>
-    </nav>
-    <a class="btn sm" href="#vip">Quero acesso antecipado</a>
-  </div>
-</header>
+<div class="urgency" role="note">
+  BLACK FRIDAY · COMBO EXCLUSIVO termina em <span class="cd-inline" data-cd-inline>--</span>
+</div>
 
 <main>
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap">
-      <div class="eyebrow">Black Friday 2026</div>
-      <h1>Menos coisas. <em>Mais intenção.</em></h1>
-      <p class="lead">Uma Black Friday diferente: poucas peças, escolhidas a dedo, para durar. Descontos reais em itens que fazem sentido para a sua casa e para a sua rotina.</p>
-      <div class="ctas">
-        <a class="btn" href="#vip">Entrar na Lista VIP</a>
-        <a class="btn ghost" href="#ofertas">Ver prévia das ofertas</a>
-      </div>
+  <!-- ================= HERO ================= -->
+  <section class="hero" style="padding:0">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <a class="logo" href="#" aria-label="Casa Intencional">
+          <svg><use href="#i-logo"/></svg>
+          <span>CASA<br>INTENCIONAL</span>
+        </a>
+        <h1><span class="a">Da Filosofia</span><span class="b">ao Método</span></h1>
+        <hr class="rule">
+        <p class="tagline">Sua casa como aliada<br>da vida que você deseja viver.</p>
 
-      <div class="countdown" id="countdown" aria-live="polite">
-        <div class="cd-box"><b data-cd="d">00</b><small>dias</small></div>
-        <div class="cd-box"><b data-cd="h">00</b><small>horas</small></div>
-        <div class="cd-box"><b data-cd="m">00</b><small>min</small></div>
-        <div class="cd-box"><b data-cd="s">00</b><small>seg</small></div>
-      </div>
-      <div class="cd-label" id="cd-label">para o início da Black Friday</div>
-    </div>
-  </section>
-
-  <!-- OFERTAS -->
-  <section id="ofertas">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Curadoria</div>
-          <h2 class="serif">Ofertas escolhidas<br>com intenção</h2>
+        <div class="bf-row">
+          <div class="bf-tag" aria-label="Black Friday"><div class="outer"><div class="inner"><span class="l1">Black</span><span class="l2">Friday</span></div></div></div>
+          <div class="brush">Combo Exclusivo</div>
+          <div class="pill-red" aria-label="Curso mais Livro Digital">
+            <svg><use href="#i-play"/></svg><span class="stack">Curso<br><span style="font-weight:600;text-transform:none;font-size:13px">Da Filosofia ao Método</span></span>
+            <span class="plus">+</span>
+            <svg><use href="#i-book"/></svg><span class="stack">Livro Digital<br><span style="font-weight:600;text-transform:none;font-size:13px">30 Dias Intencionais</span></span>
+          </div>
         </div>
-        <p>Cada item tem um motivo para estar aqui. Nada de estoque parado, nada de desconto inflado.</p>
+
+        <a class="cta pulse" href="#oferta" data-cta>
+          <svg><use href="#i-clock"/></svg>
+          <span>Aproveite a oferta<br>por tempo limitado!</span>
+        </a>
+        <div class="safe"><svg><use href="#i-lock"/></svg> Compra 100% segura · Acesso imediato · Garantia de 7 dias</div>
       </div>
-      <div class="filters" id="filters" role="toolbar" aria-label="Filtrar por categoria"></div>
-      <div class="grid" id="grid"></div>
+      <div class="hero-photo">
+        <img src="assets/monica.jpg" alt="Monica Pajewski, criadora da Casa Intencional" width="549" height="730" fetchpriority="high">
+        <div class="name"><b>Monica Pajewski</b>Criadora da Casa Intencional</div>
+      </div>
     </div>
   </section>
 
-  <!-- MANIFESTO -->
-  <section class="manifesto" id="manifesto">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Nossa Black Friday</div>
-          <h2 class="serif">Comprar bem é<br>comprar menos</h2>
+  <!-- ================= DOR ================= -->
+  <section class="bg-cream2">
+    <div class="wrap center">
+      <div class="kicker">Você se reconhece?</div>
+      <h2 class="sec">Quando a casa <span class="b">pesa</span>,<br>a vida inteira pesa junto</h2>
+      <div class="pains">
+        <div class="pain reveal"><b>Cansaço que não passa</b><p>Você arruma, organiza, limpa… e dias depois está tudo igual. A sensação é de enxugar gelo.</p></div>
+        <div class="pain reveal"><b>Excesso de coisas</b><p>Objetos que não usa, compras por impulso e armários que não fecham roubam espaço e energia.</p></div>
+        <div class="pain reveal"><b>Falta de foco</b><p>A bagunça visual vira bagunça mental. É difícil descansar, pensar e estar presente em casa.</p></div>
+        <div class="pain reveal"><b>Casa que não é sua</b><p>Seu lar não reflete quem você é nem a vida que você quer construir com a sua família.</p></div>
+      </div>
+      <p class="turn reveal">E se a sua casa deixasse de ser mais uma tarefa<br>e passasse a ser <em>sua maior aliada</em>?</p>
+    </div>
+  </section>
+
+  <!-- ================= BENEFÍCIOS ================= -->
+  <section class="bg-dark">
+    <div class="wrap center">
+      <div class="kicker" style="color:var(--gold-light)">A transformação</div>
+      <h2 class="sec">Uma casa intencional<br>te devolve <span class="b">o que importa</span></h2>
+      <div class="benefits">
+        <div class="benefit reveal">
+          <svg viewBox="0 0 64 64" fill="none" stroke="#e2a530" stroke-width="3" stroke-linecap="round"><circle cx="30" cy="34" r="22"/><circle cx="30" cy="34" r="13"/><circle cx="30" cy="34" r="4" fill="#e2a530"/><path d="M30 34 54 10M46 10h8v8"/></svg>
+          <h3>Mais foco</h3><p>Ambientes que ajudam você a pensar com clareza.</p>
         </div>
-        <p>Acreditamos que uma casa intencional se constrói com escolhas conscientes, e não com impulso.</p>
+        <div class="benefit reveal">
+          <svg viewBox="0 0 64 64" fill="none" stroke="#e2a530" stroke-width="3" stroke-linejoin="round"><path d="M32 50c-6-6-8-14-6-24 2-6 4-9 6-12 2 3 4 6 6 12 2 10 0 18-6 24Z"/><path d="M32 50c-8-1-15-6-18-16 6-1 11 1 14 4M32 50c8-1 15-6 18-16-6-1-11 1-14 4"/><path d="M32 50c-10 2-20-1-26-8 5-3 10-3 14-2M32 50c10 2 20-1 26-8-5-3-10-3-14-2"/></svg>
+          <h3>Mais leveza</h3><p>Menos excesso, menos peso, mais espaço para viver.</p>
+        </div>
+        <div class="benefit reveal">
+          <svg viewBox="0 0 64 64" fill="none" stroke="#e2a530" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M8 30 32 8l24 22M14 25v31h36V25"/><path d="M32 47s-10-6-10-12a5 5 0 0 1 10-1 5 5 0 0 1 10 1c0 6-10 12-10 12Z"/></svg>
+          <h3>Mais bem-estar</h3><p>Um lar acolhedor, que recarrega em vez de esgotar.</p>
+        </div>
+        <div class="benefit reveal">
+          <svg viewBox="0 0 64 64" fill="#e2a530"><rect x="8" y="42" width="8" height="14" rx="1"/><rect x="20" y="34" width="8" height="22" rx="1"/><rect x="32" y="26" width="8" height="30" rx="1"/><rect x="44" y="16" width="8" height="40" rx="1"/><path d="M8 32 30 16l8 6 16-14" fill="none" stroke="#e2a530" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M46 6h10v10z"/></svg>
+          <h3>Mais propósito</h3><p>Cada escolha da casa a serviço da vida que você deseja.</p>
+        </div>
       </div>
-      <div class="pillars">
-        <div class="pillar"><div class="n">01</div><h3>Desconto de verdade</h3><p>Preços praticados nos últimos 90 dias como referência. Sem maquiagem.</p></div>
-        <div class="pillar"><div class="n">02</div><h3>Feito para durar</h3><p>Materiais de qualidade e peças atemporais, que não saem de moda na próxima estação.</p></div>
-        <div class="pillar"><div class="n">03</div><h3>Seleção enxuta</h3><p>Poucas ofertas, bem pensadas. Menos tempo rolando a tela, mais tempo vivendo a casa.</p></div>
-        <div class="pillar"><div class="n">04</div><h3>Compra sem culpa</h3><p>Troca facilitada em até 30 dias para você decidir com calma.</p></div>
+      <div style="margin-top:48px"><a class="cta" href="#oferta" data-cta><svg><use href="#i-clock"/></svg><span>Quero minha casa como aliada</span></a></div>
+    </div>
+  </section>
+
+  <!-- ================= O QUE VOCÊ RECEBE ================= -->
+  <section>
+    <div class="wrap">
+      <div class="center">
+        <div class="kicker">Combo Exclusivo Black Friday</div>
+        <h2 class="sec">Tudo o que você <span class="b">recebe</span></h2>
+        <p class="sec-sub">Da filosofia que muda o seu olhar ao método que muda a sua casa.</p>
+      </div>
+      <div class="items">
+        <article class="item reveal">
+          <div class="item-img"><img src="assets/combo.jpg" alt="Curso Casa Intencional – Da Filosofia ao Método em notebook, tablet e celular" loading="lazy" width="1254" height="1254"></div>
+          <div class="item-body">
+            <span class="item-tag"><svg><use href="#i-play"/></svg> Curso online</span>
+            <h3>Casa Intencional<br><span class="b">Da Filosofia ao Método</span></h3>
+            <p class="sub">Sua casa como aliada da vida que deseja viver.</p>
+            <ul class="checks" id="modulos"></ul>
+            <div class="value" id="valor-curso"></div>
+          </div>
+        </article>
+        <article class="item rev reveal">
+          <div class="item-img"><img src="assets/ebook-quadrado.jpg" alt="Livro digital 30 Dias Intencionais" loading="lazy" width="1254" height="1254"></div>
+          <div class="item-body">
+            <span class="item-tag"><svg><use href="#i-book"/></svg> Livro digital (eBook)</span>
+            <h3>30 Dias<br><span class="b">Intencionais</span></h3>
+            <p class="sub">Uma jornada para transformar sua casa e a forma como você vive.</p>
+            <ul class="checks">
+              <li>Um passo intencional por dia, durante 30 dias</li>
+              <li>Coloque o método em prática no seu ritmo</li>
+              <li>Pequenas mudanças diárias que se somam em uma nova casa</li>
+            </ul>
+            <div class="feat-row">
+              <div class="feat"><svg viewBox="0 0 40 40" fill="none" stroke="#7b3a1d" stroke-width="2"><circle cx="20" cy="20" r="18"/><path d="M20 10v16M13 20l7 7 7-7M12 30h16"/></svg>Download<br>imediato</div>
+              <div class="feat"><svg viewBox="0 0 40 40" fill="none" stroke="#7b3a1d" stroke-width="2"><rect x="4" y="6" width="22" height="28" rx="3"/><rect x="24" y="16" width="12" height="20" rx="2"/></svg>Celular, tablet<br>ou computador</div>
+              <div class="feat"><svg viewBox="0 0 40 40" fill="none" stroke="#7b3a1d" stroke-width="2"><circle cx="20" cy="20" r="18"/><path d="M20 20c-3-4-9-4-9 0s6 4 9 0 9-4 9 0-6 4-9 0Z"/></svg>Acesso<br>vitalício</div>
+            </div>
+            <div class="value" id="valor-livro"></div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- LISTA VIP -->
-  <section id="vip">
+  <!-- ================= PARA QUEM ================= -->
+  <section class="bg-cream2">
     <div class="wrap">
-      <div class="vip">
-        <div>
-          <div class="eyebrow">Lista VIP</div>
-          <h2>Chegue antes de todo mundo</h2>
-          <p>As peças da curadoria são limitadas. Quem está na lista recebe o acesso primeiro.</p>
-          <ul>
-            <li>Acesso antecipado às ofertas</li>
-            <li>Cupom extra exclusivo</li>
-            <li>Aviso quando o seu item favorito entrar em oferta</li>
+      <div class="center">
+        <div class="kicker">Para quem é</div>
+        <h2 class="sec">Este combo é <span class="b">para você</span> se…</h2>
+      </div>
+      <div class="forwho">
+        <div class="box yes reveal">
+          <h3>É para você</h3>
+          <ul class="checks">
+            <li>Quer uma casa mais leve, organizada e acolhedora de verdade</li>
+            <li>Cansou de soluções rápidas que não se sustentam</li>
+            <li>Busca mais presença, foco e bem-estar no dia a dia</li>
+            <li>Quer que o seu lar reflita os seus valores e a sua família</li>
+            <li>Prefere um caminho prático, com começo, meio e fim</li>
           </ul>
         </div>
-        <form class="lead-form" id="lead-form" novalidate>
-          <div class="field">
-            <label for="f-nome">Nome</label>
-            <input id="f-nome" name="nome" autocomplete="given-name" required placeholder="Como podemos te chamar?">
-          </div>
-          <div class="field">
-            <label for="f-email">E-mail</label>
-            <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="voce@email.com">
-          </div>
-          <div class="field">
-            <label for="f-whats">WhatsApp (opcional)</label>
-            <input id="f-whats" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000">
-          </div>
-          <button class="btn" type="submit">Quero entrar na Lista VIP</button>
-          <div class="form-msg" id="form-msg" role="status"></div>
-          <div class="consent">Ao se cadastrar você concorda em receber comunicações da Casa Intencional. Você pode sair quando quiser.</div>
-        </form>
+        <div class="box no reveal">
+          <h3>Não é para você</h3>
+          <ul>
+            <li>Procura uma fórmula mágica, sem colocar nada em prática</li>
+            <li>Quer apenas dicas de decoração ou compras</li>
+            <li>Não está disposta a olhar para a casa com novos olhos</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Dúvidas</div>
-          <h2 class="serif">Perguntas frequentes</h2>
+  <!-- ================= AUTORA ================= -->
+  <section>
+    <div class="wrap author">
+      <div class="author-photo reveal"><img src="assets/monica.jpg" alt="Monica Pajewski" loading="lazy" width="549" height="730"></div>
+      <div class="reveal">
+        <div class="kicker">Quem vai te guiar</div>
+        <h2 class="sec">Monica <span class="b">Pajewski</span></h2>
+        <div id="bio"></div>
+        <div class="sig">Com carinho, Monica</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DEPOIMENTOS (aparece só se houver) ================= -->
+  <section class="bg-cream2" id="depoimentos" hidden>
+    <div class="wrap center">
+      <div class="kicker">Quem já viveu</div>
+      <h2 class="sec">O que dizem <span class="b">as alunas</span></h2>
+      <div class="testis" id="testis"></div>
+    </div>
+  </section>
+
+  <!-- ================= OFERTA ================= -->
+  <section class="bg-dark" id="oferta">
+    <div class="wrap center">
+      <div class="bf-tag" aria-label="Black Friday"><div class="outer"><div class="inner"><span class="l1">Black</span><span class="l2">Friday</span></div></div></div>
+      <h2 class="sec" style="margin-top:30px">Condição <span class="b">exclusiva</span><br>por tempo limitado</h2>
+
+      <div class="countdown" data-countdown>
+        <div class="cd"><b data-cd="d">00</b><small>dias</small></div>
+        <div class="cd"><b data-cd="h">00</b><small>horas</small></div>
+        <div class="cd"><b data-cd="m">00</b><small>min</small></div>
+        <div class="cd"><b data-cd="s">00</b><small>seg</small></div>
+      </div>
+      <div class="cd-note" data-cd-note>para o fim da oferta de Black Friday</div>
+
+      <div class="offer-card">
+        <div class="img"><img src="assets/combo-black-friday.jpg" alt="Combo Exclusivo Black Friday: Curso + Livro Digital" loading="lazy" width="1254" height="1254"></div>
+        <div class="offer-body">
+          <div class="brush">Combo Exclusivo</div>
+          <ul class="offer-list" id="offer-list"></ul>
+          <div class="total">
+            <div class="from" id="price-from"></div>
+            <div class="inst" id="price-inst"></div>
+            <div class="cash" id="price-cash"></div>
+            <div class="save" id="price-save"></div>
+          </div>
+          <a class="cta pulse" href="#" data-checkout>
+            <svg><use href="#i-clock"/></svg>
+            <span>Quero o combo agora!<small>Acesso imediato após a confirmação</small></span>
+          </a>
+          <div class="pay"><span>PIX</span><span>Cartão de crédito</span><span>Boleto</span></div>
+          <div class="safe"><svg><use href="#i-lock"/></svg> Pagamento 100% seguro</div>
         </div>
       </div>
-      <div class="faq">
-        <details><summary>Quando começa a Black Friday?</summary><p>As ofertas vão de 27/11 a 30/11/2026. Quem está na Lista VIP recebe acesso antecipado.</p></details>
-        <details><summary>Os descontos são cumulativos com outros cupons?</summary><p>O cupom exclusivo da Lista VIP pode ser usado junto com as ofertas da Black Friday. Outros cupons não são cumulativos.</p></details>
-        <details><summary>Qual o prazo de entrega?</summary><p>Os pedidos são despachados em até 3 dias úteis após a confirmação do pagamento. O prazo de entrega varia conforme a sua região.</p></details>
-        <details><summary>Posso trocar ou devolver?</summary><p>Sim. Durante a Black Friday, o prazo de troca é estendido para 30 dias corridos após o recebimento.</p></details>
-        <details><summary>Quais as formas de pagamento?</summary><p>Pix (com desconto adicional), cartão de crédito em até 6x sem juros e boleto.</p></details>
+    </div>
+  </section>
+
+  <!-- ================= GARANTIA ================= -->
+  <section>
+    <div class="wrap">
+      <div class="guarantee reveal">
+        <div class="seal"><div><b>7</b><span>DIAS DE<br>GARANTIA</span></div></div>
+        <div>
+          <div class="kicker">Risco zero</div>
+          <h2 class="sec">Sua satisfação <span class="b">garantida</span></h2>
+          <p>Entre, assista às aulas, leia o livro e comece a aplicar. Se em até 7 dias você sentir que não é para você, basta pedir o reembolso e devolvemos 100% do valor. Sem perguntas, sem burocracia.</p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="bg-cream2">
+    <div class="wrap">
+      <div class="center">
+        <div class="kicker">Dúvidas</div>
+        <h2 class="sec">Perguntas <span class="b">frequentes</span></h2>
+      </div>
+      <div class="faq">
+        <details><summary>Como recebo o curso e o livro digital?</summary><p>Logo após a confirmação do pagamento você recebe no seu e-mail os dados de acesso à área de membros, onde estão as aulas e o download do livro digital.</p></details>
+        <details><summary>Por quanto tempo terei acesso?</summary><p id="faq-acesso"></p></details>
+        <details><summary>Preciso gastar dinheiro com a casa para aplicar o método?</summary><p>Não. A proposta é olhar com intenção para o que você já tem. O foco está em escolhas, hábitos e organização, não em compras.</p></details>
+        <details><summary>Funciona para casa pequena, alugada ou com crianças?</summary><p>Sim. A filosofia e o método se adaptam à sua realidade: tamanho da casa, rotina e família.</p></details>
+        <details><summary>Quais as formas de pagamento?</summary><p>PIX, cartão de crédito (com opção de parcelamento) e boleto.</p></details>
+        <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Se não fizer sentido para você, devolvemos 100% do valor.</p></details>
+        <details><summary>Até quando vale a condição de Black Friday?</summary><p id="faq-prazo"></p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA FINAL ================= -->
+  <section class="bg-dark final">
+    <div class="wrap">
+      <h2 class="sec">Sua casa pode ser<br><span class="b">sua maior aliada</span></h2>
+      <p class="sec-sub">A decisão de começar é hoje. A condição de Black Friday não volta.</p>
+      <a class="final-img" href="#" data-checkout style="display:block"><picture><source media="(max-width: 600px)" srcset="assets/hero-mobile.jpg" width="900" height="1600"><img src="assets/hero-desktop.jpg" alt="Black Friday Casa Intencional – Combo Exclusivo Curso + Livro Digital" loading="lazy" width="1600" height="900"></picture></a>
+      <div style="margin-top:36px"><a class="cta pulse" href="#" data-checkout><svg><use href="#i-clock"/></svg><span>Aproveite a oferta<br>por tempo limitado!</span></a></div>
+      <div class="safe" style="color:#d9c2a8"><svg><use href="#i-lock"/></svg> Compra segura · Garantia de 7 dias</div>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <div>© <span id="year">2026</span> Casa Intencional</div>
-    <div>Ofertas válidas enquanto durarem os estoques.</div>
+    <div class="logo"><svg width="44" height="44"><use href="#i-logo"/></svg><span>CASA<br>INTENCIONAL</span></div>
+    <p>© <span data-year>2026</span> Casa Intencional · Monica Pajewski. Todos os direitos reservados.</p>
+    <p>Os resultados variam de pessoa para pessoa e dependem da aplicação do conteúdo.</p>
   </div>
 </footer>
 
-<a class="wa" id="wa" href="#" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></svg>
-</a>
+<div class="sticky-cta" id="sticky">
+  <div class="p">Black Friday<b id="sticky-price"></b></div>
+  <a class="cta" href="#" data-checkout><span>Quero o combo</span></a>
+</div>
 
 <script>
 /* ==========================================================
-   CONFIGURAÇÃO — edite aqui
+   CONFIGURAÇÃO — edite aqui antes de publicar
    ========================================================== */
 const CONFIG = {
-  // Início e fim da Black Friday (horário de Brasília, -03:00)
-  inicio: "2026-11-27T00:00:00-03:00",
-  fim:    "2026-11-30T23:59:59-03:00",
+  // Link do checkout (Hotmart, Kiwify, Eduzz, etc.). Os parâmetros UTM da URL são repassados.
+  checkout: "#",
 
-  // Número de WhatsApp com DDI + DDD, só dígitos. Ex.: "5511999999999"
-  whatsapp: "",
+  // Fim da oferta (horário de Brasília)
+  fimOferta: "2026-11-30T23:59:59-03:00",
 
-  // Endpoint que recebe o cadastro da Lista VIP (POST JSON).
-  // Ex.: webhook do RD Station, Mailchimp, Zapier, Make, Google Apps Script...
-  // Se ficar vazio, os cadastros são guardados só no navegador (modo demonstração).
-  leadEndpoint: "",
+  // Preços (em reais)
+  valorCurso: 497,          // valor "cheio" do curso
+  valorLivro: 97,           // valor "cheio" do livro
+  precoBlack: 197,          // preço do combo na Black Friday (à vista)
+  parcelas: 12,
+  valorParcela: 19.70,      // valor da parcela informado pela plataforma (com juros, se houver)
 
-  // Produtos. "imagem" é opcional (URL). "link" leva para a página do produto na loja.
-  produtos: [
-    { nome: "Jogo de cama 100% algodão egípcio", categoria: "Quarto",     de: 489, por: 342, porque: "Toque macio que melhora com as lavagens.", imagem: "", link: "#" },
-    { nome: "Kit de potes herméticos em vidro",   categoria: "Cozinha",    de: 259, por: 181, porque: "Despensa organizada e sem plástico.",     imagem: "", link: "#" },
-    { nome: "Manta de tricô em lã natural",       categoria: "Sala",       de: 329, por: 230, porque: "Aconchego que atravessa gerações.",       imagem: "", link: "#" },
-    { nome: "Cestos de fibra natural (trio)",     categoria: "Organização",de: 219, por: 153, porque: "Cada coisa no seu lugar, com beleza.",    imagem: "", link: "#" },
-    { nome: "Panela de ferro fundido 24 cm",      categoria: "Cozinha",    de: 599, por: 449, porque: "Uma panela para a vida inteira.",         imagem: "", link: "#" },
-    { nome: "Luminária de mesa em cerâmica",      categoria: "Sala",       de: 379, por: 284, porque: "Luz quente para desacelerar à noite.",    imagem: "", link: "#" },
-    { nome: "Toalhas de banho em linho (par)",    categoria: "Banho",      de: 289, por: 202, porque: "Secam rápido e duram muito.",             imagem: "", link: "#" },
-    { nome: "Organizador modular de gavetas",     categoria: "Organização",de: 149, por: 104, porque: "Gaveta que você abre e sorri.",           imagem: "", link: "#" },
+  acesso: "1 ano de acesso ao curso e acesso vitalício ao livro digital.",
+
+  // Conteúdo do curso (substitua pelos módulos reais)
+  modulos: [
+    "A filosofia: por que a sua casa influencia a vida que você vive",
+    "Clareza: defina a vida que deseja e o papel da casa nela",
+    "O método passo a passo para transformar cada ambiente",
+    "Rotinas e hábitos que mantêm a casa leve no dia a dia",
+  ],
+
+  // Bio da Monica (um parágrafo por item)
+  bio: [
+    "Criadora da Casa Intencional, Monica ajuda mulheres a transformarem a relação com a própria casa, para que ela deixe de ser fonte de cansaço e passe a ser aliada da vida que desejam viver.",
+    "No curso Da Filosofia ao Método, ela reúne a visão e o passo a passo que aplica e ensina, de forma leve, acolhedora e prática.",
+  ],
+
+  // Depoimentos reais (a seção só aparece se houver pelo menos um)
+  depoimentos: [
+    // { texto: "Minha casa mudou e eu mudei junto.", nome: "Ana, São Paulo" },
   ],
 };
 
 /* ==========================================================
-   Daqui para baixo não é preciso mexer
+   Não é preciso editar daqui para baixo
    ========================================================== */
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
 const brl = v => v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 const pad = n => String(n).padStart(2, "0");
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
 
-// Ícones simples por categoria (placeholder quando não há imagem)
-const ICONS = {
-  "Quarto":      '<path d="M4 30h56v14H4zM8 20h20v10H8zM36 20h20v10H36zM4 44v6M60 44v6"/>',
-  "Cozinha":     '<path d="M10 26h44v18a8 8 0 0 1-8 8H18a8 8 0 0 1-8-8zM4 30h6M54 30h6M24 18c0-4 4-4 4-8M36 18c0-4 4-4 4-8"/>',
-  "Sala":        '<path d="M8 28h48v14H8zM12 28v-8h40v8M12 42v6M52 42v6"/>',
-  "Organização": '<path d="M10 22h44l-4 28H14zM8 22h48M22 30h20"/>',
-  "Banho":       '<path d="M6 32h52v6a12 12 0 0 1-12 12H18A12 12 0 0 1 6 38zM14 32V14a6 6 0 0 1 12 0"/>',
-};
-const TINTS = ["#2b2119", "#24251d", "#2a1f1f", "#1f2427", "#26221a"];
-
-function renderProdutos(filtro = "Todas") {
-  const grid = document.getElementById("grid");
-  const lista = CONFIG.produtos.filter(p => filtro === "Todas" || p.categoria === filtro);
-  grid.innerHTML = lista.map((p, i) => {
-    const off = Math.round((1 - p.por / p.de) * 100);
-    const cats = Object.keys(ICONS);
-    const tint = TINTS[cats.indexOf(p.categoria) % TINTS.length] || TINTS[i % TINTS.length];
-    const thumb = p.imagem
-      ? `<img src="${esc(p.imagem)}" alt="${esc(p.nome)}" loading="lazy">`
-      : `<svg viewBox="0 0 64 64" fill="none" stroke="#e9c9a6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">${ICONS[p.categoria] || ICONS["Sala"]}</svg>`;
-    return `
-      <article class="card">
-        <div class="thumb" style="background:${tint}">${thumb}<span class="badge">-${off}%</span></div>
-        <div class="card-body">
-          <div class="card-cat">${esc(p.categoria)}</div>
-          <h3>${esc(p.nome)}</h3>
-          <p class="why">${esc(p.porque)}</p>
-          <div class="price"><s>${brl(p.de)}</s><b>${brl(p.por)}</b></div>
-          <a class="btn ghost sm" href="${esc(p.link || "#")}">${estado() === "ativa" ? "Comprar agora" : "Avise-me"}</a>
-        </div>
-      </article>`;
-  }).join("");
+// Checkout com repasse de UTMs
+function checkoutUrl() {
+  if (!CONFIG.checkout || CONFIG.checkout === "#") return "#oferta";
+  try {
+    const u = new URL(CONFIG.checkout);
+    new URLSearchParams(location.search).forEach((v, k) => { if (!u.searchParams.has(k)) u.searchParams.set(k, v); });
+    return u.toString();
+  } catch { return CONFIG.checkout; }
 }
+$$("[data-checkout]").forEach(a => a.href = checkoutUrl());
 
-function renderFiltros() {
-  const cats = ["Todas", ...new Set(CONFIG.produtos.map(p => p.categoria))];
-  const box = document.getElementById("filters");
-  box.innerHTML = cats.map((c, i) => `<button class="chip" aria-pressed="${i === 0}">${esc(c)}</button>`).join("");
-  box.addEventListener("click", e => {
-    const b = e.target.closest(".chip"); if (!b) return;
-    box.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b));
-    renderProdutos(b.textContent);
-  });
+// Preços
+const total = CONFIG.valorCurso + CONFIG.valorLivro;
+const off = Math.round((1 - CONFIG.precoBlack / total) * 100);
+$("#offer-list").innerHTML = `
+  <li><span>Curso Casa Intencional – Da Filosofia ao Método</span><s>${brl(CONFIG.valorCurso)}</s></li>
+  <li><span>Livro Digital 30 Dias Intencionais</span><s>${brl(CONFIG.valorLivro)}</s></li>
+  <li><span>Acesso imediato + garantia de 7 dias</span><s>incluso</s></li>`;
+$("#price-from").innerHTML = `De <s>${brl(total)}</s> por apenas`;
+$("#price-inst").innerHTML = `<small>${CONFIG.parcelas}x</small> ${brl(CONFIG.valorParcela)}`;
+$("#price-cash").textContent = `ou ${brl(CONFIG.precoBlack)} à vista`;
+$("#price-save").textContent = `Economia de ${off}% na Black Friday`;
+$("#sticky-price").textContent = `${CONFIG.parcelas}x ${brl(CONFIG.valorParcela)}`;
+$("#valor-curso").innerHTML = `Valor individual: <s>${brl(CONFIG.valorCurso)}</s> · no combo de Black Friday`;
+$("#valor-livro").innerHTML = `Valor individual: <s>${brl(CONFIG.valorLivro)}</s> · no combo de Black Friday`;
+
+// Conteúdo
+$("#modulos").innerHTML = CONFIG.modulos.map(m => `<li>${esc(m)}</li>`).join("");
+$("#bio").innerHTML = CONFIG.bio.map(p => `<p>${esc(p)}</p>`).join("");
+$("#faq-acesso").textContent = CONFIG.acesso;
+const fim = new Date(CONFIG.fimOferta);
+$("#faq-prazo").textContent = `A condição é válida até ${fim.toLocaleDateString("pt-BR", { timeZone: "America/Sao_Paulo" })} às ${fim.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "America/Sao_Paulo" })} (horário de Brasília) ou enquanto durarem as vagas.`;
+if (CONFIG.depoimentos.length) {
+  $("#depoimentos").hidden = false;
+  $("#testis").innerHTML = CONFIG.depoimentos.map(d => `<div class="testi"><div class="stars">★★★★★</div><p>“${esc(d.texto)}”</p><b>${esc(d.nome)}</b></div>`).join("");
 }
+$$("[data-year]").forEach(e => e.textContent = new Date().getFullYear());
 
-function estado(now = Date.now()) {
-  if (now < Date.parse(CONFIG.inicio)) return "antes";
-  if (now <= Date.parse(CONFIG.fim)) return "ativa";
-  return "encerrada";
-}
-
+// Contagem regressiva
 function tick() {
-  const now = Date.now(), st = estado(now);
-  const alvo = st === "antes" ? Date.parse(CONFIG.inicio) : Date.parse(CONFIG.fim);
-  let diff = Math.max(0, alvo - now) / 1000;
+  let diff = Math.max(0, fim - Date.now()) / 1000;
   const d = Math.floor(diff / 86400); diff -= d * 86400;
-  const h = Math.floor(diff / 3600);  diff -= h * 3600;
-  const m = Math.floor(diff / 60);
-  const s = Math.floor(diff - m * 60);
-  const set = (k, v) => document.querySelector(`[data-cd="${k}"]`).textContent = pad(v);
-  set("d", d); set("h", h); set("m", m); set("s", s);
-  document.getElementById("cd-label").textContent =
-    st === "antes" ? "para o início da Black Friday" :
-    st === "ativa" ? "para o fim das ofertas — aproveite" :
-    "A Black Friday terminou. Obrigado por comprar com intenção!";
-  if (st === "encerrada") document.getElementById("countdown").style.display = "none";
-  return st;
+  const h = Math.floor(diff / 3600); diff -= h * 3600;
+  const m = Math.floor(diff / 60); const s = Math.floor(diff - m * 60);
+  $$("[data-cd=d]").forEach(e => e.textContent = pad(d));
+  $$("[data-cd=h]").forEach(e => e.textContent = pad(h));
+  $$("[data-cd=m]").forEach(e => e.textContent = pad(m));
+  $$("[data-cd=s]").forEach(e => e.textContent = pad(s));
+  const ended = fim - Date.now() <= 0;
+  $$("[data-cd-inline]").forEach(e => e.textContent = ended ? "oferta encerrada" : `${d > 0 ? d + "d " : ""}${pad(h)}:${pad(m)}:${pad(s)}`);
+  if (ended) { $$("[data-countdown]").forEach(e => e.style.display = "none"); $$("[data-cd-note]").forEach(e => e.textContent = "A oferta de Black Friday foi encerrada."); }
 }
+tick(); setInterval(tick, 1000);
 
-function setupForm() {
-  const form = document.getElementById("lead-form");
-  const msg = document.getElementById("form-msg");
-  form.addEventListener("submit", async e => {
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(form));
-    msg.className = "form-msg";
-    if (!data.nome.trim()) { msg.textContent = "Conta pra gente o seu nome."; msg.classList.add("err"); return; }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) { msg.textContent = "Confira o seu e-mail."; msg.classList.add("err"); return; }
-    data.origem = "black-friday-2026"; data.data = new Date().toISOString();
-    const btn = form.querySelector("button"); btn.disabled = true;
-    try {
-      if (CONFIG.leadEndpoint) {
-        const r = await fetch(CONFIG.leadEndpoint, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
-        if (!r.ok) throw new Error(r.status);
-      } else {
-        try { const k = "ci-leads"; const arr = JSON.parse(localStorage.getItem(k) || "[]"); arr.push(data); localStorage.setItem(k, JSON.stringify(arr)); } catch {}
-      }
-      form.reset();
-      msg.textContent = `Pronto, ${data.nome.split(" ")[0]}! Você está na Lista VIP. Fique de olho no seu e-mail.`;
-      msg.classList.add("ok");
-    } catch {
-      msg.textContent = "Não conseguimos registrar agora. Tente novamente em instantes.";
-      msg.classList.add("err");
-    } finally { btn.disabled = false; }
-  });
-}
+// Barra fixa no celular (aparece depois do hero, some na seção de oferta)
+const sticky = $("#sticky"), hero = $(".hero"), oferta = $("#oferta");
+const io = new IntersectionObserver(() => {
+  const h = hero.getBoundingClientRect(), o = oferta.getBoundingClientRect();
+  const inOffer = o.top < innerHeight && o.bottom > 0;
+  sticky.classList.toggle("show", h.bottom < 0 && !inOffer);
+}, { threshold: [0, .01, 1] });
+io.observe(hero); io.observe(oferta);
+addEventListener("scroll", () => {
+  const h = hero.getBoundingClientRect(), o = oferta.getBoundingClientRect();
+  sticky.classList.toggle("show", h.bottom < 0 && !(o.top < innerHeight && o.bottom > 0));
+}, { passive: true });
 
-function setupWhats() {
-  const a = document.getElementById("wa");
-  if (!CONFIG.whatsapp) { a.style.display = "none"; return; }
-  a.href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent("Olá! Vim pela Black Friday da Casa Intencional.")}`;
-}
-
-// Init
-const st = tick(); setInterval(tick, 1000);
-if (st === "ativa") document.getElementById("announce").textContent = "A Black Friday Casa Intencional está no ar · ofertas até 30/11";
-renderFiltros(); renderProdutos(); setupForm(); setupWhats();
-document.getElementById("year").textContent = new Date().getFullYear();
+// Animação de entrada
+const rv = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); rv.unobserve(e.target); } }), { threshold: .12 });
+$$(".reveal").forEach(el => rv.observe(el));
 </script>
 </body>
 </html>
