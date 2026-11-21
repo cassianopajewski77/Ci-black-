@@ -544,7 +544,7 @@
               <div class="feat"><svg viewBox="0 0 40 40" fill="none" stroke="#7b3a1d" stroke-width="2"><rect x="4" y="6" width="22" height="28" rx="3"/><rect x="24" y="16" width="12" height="20" rx="2"/></svg>Celular, tablet<br>ou computador</div>
               <div class="feat"><svg viewBox="0 0 40 40" fill="none" stroke="#7b3a1d" stroke-width="2"><circle cx="20" cy="20" r="18"/><path d="M20 20c-3-4-9-4-9 0s6 4 9 0 9-4 9 0-6 4-9 0Z"/></svg>Acesso<br>vitalício</div>
             </div>
-            <div class="value" id="valor-livro"></div>
+            <div class="bf-price" id="valor-livro"></div>
           </div>
         </article>
       </div>
@@ -713,6 +713,7 @@ const CONFIG = {
   valorCurso: 124.90,       // valor "cheio" do curso
   valorLivro: 24.90,        // valor "cheio" do livro
   precoBlackCurso: 74.94,   // preço de Black Friday exibido no card do curso
+  precoBlackLivro: 14.94,   // preço de Black Friday exibido no card do livro
   precoBlack: 89.88,        // preço do combo na Black Friday (à vista)
   parcelas: 10,
   valorParcela: null,       // valor da parcela que a Hotmart mostra (null = mostra só o preço à vista)
@@ -771,13 +772,14 @@ $("#price-inst").innerHTML = CONFIG.valorParcela ? `<small>${CONFIG.parcelas}x</
 $("#price-cash").textContent = CONFIG.valorParcela ? `ou ${brl(CONFIG.precoBlack)} à vista` : `à vista ou parcelado em até ${CONFIG.parcelas}x no cartão`;
 $("#price-save").textContent = `Economia de ${off}% na Black Friday`;
 $("#sticky-price").textContent = CONFIG.valorParcela ? `${CONFIG.parcelas}x ${brl(CONFIG.valorParcela)}` : brl(CONFIG.precoBlack);
-{
-  const [int, cents] = CONFIG.precoBlackCurso.toFixed(2).split(".");
-  $("#valor-curso").innerHTML = `<div class="tag"><span>Black</span><span class="g">Friday</span></div>
-    <div><div class="txt">De <s>${brl(CONFIG.valorCurso)}</s><br>por apenas</div>
+function bfBanner(el, de, por) {
+  const [int, cents] = por.toFixed(2).split(".");
+  $(el).innerHTML = `<div class="tag"><span>Black</span><span class="g">Friday</span></div>
+    <div><div class="txt">De <s>${brl(de)}</s><br>por apenas</div>
     <div class="big"><span class="rs">R$</span>${int}<sup>,${cents}</sup></div></div>`;
 }
-$("#valor-livro").innerHTML = `Valor individual: <s>${brl(CONFIG.valorLivro)}</s> · no combo de Black Friday`;
+bfBanner("#valor-curso", CONFIG.valorCurso, CONFIG.precoBlackCurso);
+bfBanner("#valor-livro", CONFIG.valorLivro, CONFIG.precoBlackLivro);
 
 // Conteúdo
 $("#modulos").innerHTML = CONFIG.modulos.map(m => `<li>${esc(m)}</li>`).join("");
