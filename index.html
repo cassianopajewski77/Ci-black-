@@ -649,11 +649,11 @@ const CONFIG = {
   fimOferta: "2026-11-30T23:59:59-03:00",
 
   // Preços (em reais)
-  valorCurso: 147,          // valor "cheio" do curso
-  valorLivro: 97,           // valor "cheio" do livro
-  precoBlack: 122,          // preço do combo na Black Friday (à vista)
+  valorCurso: 124.90,       // valor "cheio" do curso
+  valorLivro: 24.90,        // valor "cheio" do livro
+  precoBlack: 89.88,        // preço do combo na Black Friday (à vista)
   parcelas: 10,
-  valorParcela: 14.66,      // valor da parcela informado pela plataforma (com juros, se houver)
+  valorParcela: null,       // valor da parcela que a Hotmart mostra (null = mostra só o preço à vista)
 
   acesso: "O acesso é vitalício: tanto o curso quanto o livro digital são seus para sempre.",
 
@@ -705,10 +705,10 @@ $("#offer-list").innerHTML = `
   <li><span>Livro Digital 30 Dias Intencionais</span><s>${brl(CONFIG.valorLivro)}</s></li>
   <li><span>Acesso imediato e vitalício + garantia de 7 dias</span><em class="incl">Incluso</em></li>`;
 $("#price-from").innerHTML = `De <s>${brl(total)}</s> por apenas`;
-$("#price-inst").innerHTML = `<small>${CONFIG.parcelas}x</small> ${brl(CONFIG.valorParcela)}`;
-$("#price-cash").textContent = `ou ${brl(CONFIG.precoBlack)} à vista`;
+$("#price-inst").innerHTML = CONFIG.valorParcela ? `<small>${CONFIG.parcelas}x</small> ${brl(CONFIG.valorParcela)}` : brl(CONFIG.precoBlack);
+$("#price-cash").textContent = CONFIG.valorParcela ? `ou ${brl(CONFIG.precoBlack)} à vista` : `à vista ou parcelado em até ${CONFIG.parcelas}x no cartão`;
 $("#price-save").textContent = `Economia de ${off}% na Black Friday`;
-$("#sticky-price").textContent = `${CONFIG.parcelas}x ${brl(CONFIG.valorParcela)}`;
+$("#sticky-price").textContent = CONFIG.valorParcela ? `${CONFIG.parcelas}x ${brl(CONFIG.valorParcela)}` : brl(CONFIG.precoBlack);
 $("#valor-curso").innerHTML = `Valor individual: <s>${brl(CONFIG.valorCurso)}</s> · no combo de Black Friday`;
 $("#valor-livro").innerHTML = `Valor individual: <s>${brl(CONFIG.valorLivro)}</s> · no combo de Black Friday`;
 
