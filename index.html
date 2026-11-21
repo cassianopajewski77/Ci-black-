@@ -233,7 +233,6 @@
   .item.rev .item-img { order: 2; }
   .item-img { background: var(--cream-2); }
   .item-img img { width: 100%; height: 100%; object-fit: cover; }
-  .item:not(.rev) .item-img img { object-position: 12% 50%; }
   .item-body { padding: clamp(24px, 4vw, 44px); display: flex; flex-direction: column; justify-content: center; }
   .item-tag { display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; background: linear-gradient(180deg, #a90f17, var(--red-deep)); color: #fff; border-radius: 999px; padding: 6px 14px; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
   .item-tag svg { width: 18px; height: 18px; }
@@ -243,21 +242,8 @@
   .item .checks li { font-size: 16px; }
   .item .value { margin-top: 18px; font-size: 14px; color: var(--muted); }
   .item .value s { color: var(--brown); font-weight: 700; }
-  /* Faixa de preço Black Friday no card */
-  .bf-price { position: relative; display: flex; align-items: center; gap: 18px; margin-top: 26px; padding: 14px 22px 14px 0;
-    background: linear-gradient(180deg, #a90f17, var(--red-deep)); border-radius: 22px; border-bottom: 4px solid var(--gold);
-    box-shadow: 0 14px 30px rgba(110,8,13,.35); color: #fff; }
-  .bf-price .tag { flex: none; margin: -24px 0 -24px -10px; padding: 14px 18px; border-radius: 16px; transform: rotate(-3deg);
-    background: linear-gradient(180deg, #3a1a10, #1c0b06); border-bottom: 4px solid var(--gold); box-shadow: 0 10px 22px rgba(0,0,0,.35);
-    font: italic 900 clamp(26px, 3vw, 38px)/.92 Montserrat, sans-serif; text-transform: uppercase; }
-  .bf-price .tag span { display: block; }
-  .bf-price .tag .g { color: var(--gold-light); }
-  .bf-price .txt { font: 700 clamp(14px, 1.5vw, 18px)/1.15 Montserrat, sans-serif; text-transform: uppercase; }
-  .bf-price .txt s { text-decoration-color: #ff4b4b; text-decoration-thickness: 3px; }
-  .bf-price .big { display: flex; align-items: flex-start; gap: 6px; color: var(--gold-light); font: 900 clamp(44px, 6vw, 76px)/.95 Montserrat, sans-serif; letter-spacing: -.02em; margin-top: 4px; }
-  .bf-price .big .rs { font-size: .55em; margin-top: .55em; }
-  .bf-price .big sup { font-size: .42em; margin-top: .1em; }
-  @media (max-width: 480px) { .bf-price { gap: 12px; padding-right: 14px; } .bf-price .tag { padding: 10px 12px; } }
+  .item-full { border-radius: 24px; overflow: hidden; box-shadow: 0 18px 40px rgba(74,42,23,.10); }
+  .item-full img { width: 100%; height: auto; }
   .feat-row { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 18px; padding-top: 18px; border-top: 1px solid #e6d0b6; }
   .feat { display: flex; align-items: center; gap: 10px; font-family: "Cormorant Garamond", serif; font-size: 18px; font-weight: 600; color: var(--brown-dark); line-height: 1.1; }
   .feat svg { width: 34px; height: 34px; flex: none; }
@@ -473,15 +459,8 @@
         <p class="sec-sub">Da filosofia que muda o seu olhar ao método que muda a sua casa.</p>
       </div>
       <div class="items">
-        <article class="item reveal">
-          <div class="item-img"><img src="assets/curso.jpg" alt="Curso Casa Intencional – Da Filosofia ao Método, com Monica Pajewski" loading="lazy" width="1254" height="1254"></div>
-          <div class="item-body">
-            <span class="item-tag"><svg><use href="#i-play"/></svg> Curso online</span>
-            <h3>Casa Intencional<br><span class="b">Da Filosofia ao Método</span></h3>
-            <p class="sub">Sua casa como aliada da vida que deseja viver.</p>
-            <ul class="checks" id="modulos"></ul>
-            <div class="bf-price" id="valor-curso"></div>
-          </div>
+        <article class="item-full reveal">
+          <img src="assets/card-curso.jpg" alt="Curso Casa Intencional – Da Filosofia ao Método. Black Friday: de R$ 124,90 por apenas R$ 74,94" loading="lazy" width="1705" height="853">
         </article>
         <article class="item rev reveal">
           <div class="item-img"><img src="assets/ebook-quadrado.jpg" alt="Livro digital 30 Dias Intencionais" loading="lazy" width="1254" height="1254"></div>
@@ -667,7 +646,6 @@ const CONFIG = {
   // Preços (em reais)
   valorCurso: 124.90,       // valor "cheio" do curso
   valorLivro: 24.90,        // valor "cheio" do livro
-  precoBlackCurso: 74.94,   // preço de Black Friday exibido no card do curso
   precoBlack: 89.88,        // preço do combo na Black Friday (à vista)
   parcelas: 10,
   valorParcela: null,       // valor da parcela que a Hotmart mostra (null = mostra só o preço à vista)
@@ -726,16 +704,11 @@ $("#price-inst").innerHTML = CONFIG.valorParcela ? `<small>${CONFIG.parcelas}x</
 $("#price-cash").textContent = CONFIG.valorParcela ? `ou ${brl(CONFIG.precoBlack)} à vista` : `à vista ou parcelado em até ${CONFIG.parcelas}x no cartão`;
 $("#price-save").textContent = `Economia de ${off}% na Black Friday`;
 $("#sticky-price").textContent = CONFIG.valorParcela ? `${CONFIG.parcelas}x ${brl(CONFIG.valorParcela)}` : brl(CONFIG.precoBlack);
-{
-  const [int, cents] = CONFIG.precoBlackCurso.toFixed(2).split(".");
-  $("#valor-curso").innerHTML = `<div class="tag"><span>Black</span><span class="g">Friday</span></div>
-    <div><div class="txt">De <s>${brl(CONFIG.valorCurso)}</s><br>por apenas</div>
-    <div class="big"><span class="rs">R$</span>${int}<sup>,${cents}</sup></div></div>`;
-}
+
 $("#valor-livro").innerHTML = `Valor individual: <s>${brl(CONFIG.valorLivro)}</s> · no combo de Black Friday`;
 
 // Conteúdo
-$("#modulos").innerHTML = CONFIG.modulos.map(m => `<li>${esc(m)}</li>`).join("");
+if ($("#modulos")) $("#modulos").innerHTML = CONFIG.modulos.map(m => `<li>${esc(m)}</li>`).join("");
 $("#bio").innerHTML = CONFIG.bio.map(p => `<p>${esc(p)}</p>`).join("");
 $("#faq-acesso").textContent = CONFIG.acesso;
 const fim = new Date(CONFIG.fimOferta);
