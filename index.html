@@ -452,6 +452,27 @@
     .hero h1.h1-long { font-size: 28px; }
     .hero-sub { font-size: 20px; }
   }
+
+  /* ---------- Caixa de preço do combo ---------- */
+  .item .desc { margin: 0 0 6px; font-size: 16px; }
+  .combo-box { max-width: 880px; margin: 40px auto 0; display: grid; grid-template-columns: auto 1fr; gap: 24px 28px; align-items: center;
+    padding: 34px 36px; border-radius: 26px; color: #fff; text-align: center;
+    background: radial-gradient(ellipse at 50% 0%, #4a1f12, #1f0d07 75%); border: 2px solid var(--gold);
+    box-shadow: 0 0 0 6px rgba(226,165,48,.18), 0 28px 56px rgba(0,0,0,.35); }
+  .combo-box .bf-tag .inner { padding: 10px 22px 10px 60px; }
+  .combo-box .bf-tag .inner::before { left: 26px; width: 14px; height: 14px; margin-top: -7px; }
+  .combo-box .bf-tag .l1, .combo-box .bf-tag .l2 { font-size: 40px; }
+  .combo-prices .lbl { font-size: 15px; color: #f0dcc4; }
+  .combo-prices .lbl s { color: #fff; font-weight: 800; text-decoration-color: #ff4b4b; text-decoration-thickness: 3px; }
+  .combo-prices .now { font: 900 clamp(48px, 6vw, 68px)/1 Montserrat, sans-serif; color: var(--gold-light); margin: 4px 0 12px; }
+  .combo-prices .brush { font-size: 16px; white-space: nowrap; }
+  .urg-text { max-width: 46ch; margin-top: 14px; }
+  .urg-text b { color: var(--gold-light); font-style: normal; font-family: Montserrat, sans-serif; font-size: .8em; }
+  .final .prose p { text-align: center; }
+  .combo-box > * { min-width: 0; }
+  .combo-box .cta { grid-column: 1 / -1; justify-self: center; min-width: min(420px, 100%); justify-content: center; }
+  @media (max-width: 860px) { .combo-box { grid-template-columns: 1fr; justify-items: center; gap: 20px; padding: 28px 16px; } }
+  @media (max-width: 600px) { .combo-prices .brush { white-space: normal; font-size: 14px; padding: 8px 18px; } .combo-box .cta { min-width: 0; width: 100%; } }
 </style>
 </head>
 <body>
@@ -586,26 +607,45 @@
       <div class="reveal">
         <p>Quando você passa a viver numa casa cuidada, com intenção, algo muda dentro de você. Você começa a se acostumar com um padrão de vida que combina com a próxima fase que deseja viver.</p>
         <p>Uma vida de abundância em todas as áreas só acontece quando o ambiente contribui para o seu desenvolvimento.</p>
+        <p>E o melhor lugar para essa nova realidade começar é o lugar onde você acorda, vive e descansa todos os dias.</p>
       </div>
     </div>
   </section>
 
-  <!-- ================= O QUE VOCÊ RECEBE ================= -->
+  <!-- ================= 9. A VIRADA DE CHAVE ================= -->
+  <section class="bg-dark">
+    <div class="wrap prose">
+      <h2 class="sec center">Quando a chave vira, <span class="b">você não quer mais voltar.</span></h2>
+      <div class="reveal">
+        <p>É um processo, e ele é natural.</p>
+        <p>Você começa a se vestir melhor, mesmo em casa. Se acostuma com isso e passa a querer estar cada vez melhor.</p>
+        <p>Começa a praticar hábitos saudáveis e ganha mais disposição, mais energia e mais vontade.</p>
+        <p>Sua autoimagem muda. Sua postura muda. A forma como você se trata muda.</p>
+        <p>E então as oportunidades começam a aparecer, porque agora você está preparada para elas, como quem treinou antes do grande jogo.</p>
+        <p>Dia após dia, sua vida vai mudando. E, com o tempo, até a sua casa muda junto com você.</p>
+      </div>
+      <p class="highlight reveal">Tudo isso a partir de um único ponto de partida: a casa onde você vive hoje.</p>
+    </div>
+  </section>
+
+  <!-- ================= 10. O QUE VOCÊ RECEBE ================= -->
   <section>
     <div class="wrap">
-      <div class="center">
-        <div class="kicker">Combo Exclusivo Black Friday</div>
-        <h2 class="sec">Tudo o que você <span class="b">recebe</span></h2>
-        <p class="sec-sub">Da filosofia que muda o seu olhar ao método que muda a sua casa.</p>
+      <div class="prose" style="margin:0 auto">
+        <h2 class="sec center">Você não precisa de uma casa nova. <span class="b">Precisa de um novo olhar sobre a casa que já tem.</span></h2>
+        <div class="reveal">
+          <p><strong>O primeiro passo é a consciência:</strong> entender como você vive, onde vive, e o que a sua casa está ensinando à sua mente todos os dias.</p>
+          <p><strong>O segundo passo é a prática:</strong> treinar, um dia de cada vez, a nova versão que você quer se tornar.</p>
+          <p>Por isso, criei este combo para você ter as duas coisas:</p>
+        </div>
       </div>
       <div class="items">
         <article class="item reveal">
           <div class="item-img"><img src="assets/curso.jpg" alt="Curso Casa Intencional – Da Filosofia ao Método, com Monica Pajewski" loading="lazy" width="1254" height="1254"></div>
           <div class="item-body">
             <span class="item-tag"><svg><use href="#i-play"/></svg> Curso online</span>
-            <h3>Casa Intencional<br><span class="b">Da Filosofia ao Método</span></h3>
-            <p class="sub">Sua casa como aliada da vida que deseja viver.</p>
-            <ul class="checks" id="modulos"></ul>
+            <h3>📺 Curso Casa Intencional<br><span class="b">Da Filosofia ao Método</span></h3>
+            <p class="desc">É o seu despertar. Em <strong>6 módulos e 22 aulas objetivas, de 8 a 15 minutos</strong>, você entende como a casa influencia sua vida nos níveis físico, emocional e espiritual, e aprende o método para usá-la a seu favor.</p>
             <div class="bf-price" id="valor-curso"></div>
           </div>
         </article>
@@ -613,21 +653,28 @@
           <div class="item-img"><img src="assets/ebook-quadrado.jpg" alt="Livro digital 30 Dias Intencionais" loading="lazy" width="1254" height="1254"></div>
           <div class="item-body">
             <span class="item-tag"><svg><use href="#i-book"/></svg> Livro digital (eBook)</span>
-            <h3>30 Dias<br><span class="b">Intencionais</span></h3>
-            <p class="sub">Uma jornada para transformar sua casa e a forma como você vive.</p>
-            <ul class="checks">
-              <li>Um passo intencional por dia, durante 30 dias</li>
-              <li>Coloque o método em prática no seu ritmo</li>
-              <li>Pequenas mudanças diárias que se somam em uma nova casa</li>
-            </ul>
+            <h3>📖 Livro digital<br><span class="b">30 Dias Intencionais</span></h3>
+            <p class="desc">É o seu treino diário. São <strong>228 páginas, 8 estações temáticas e 30 dias de prática guiada</strong> para trabalhar mentalidade, crenças, autoestima e merecimento, dentro da sua casa, no seu ritmo.</p>
             <div class="feat-row">
-              <div class="feat"><svg viewBox="0 0 40 40" fill="none" stroke="#7b3a1d" stroke-width="2"><circle cx="20" cy="20" r="18"/><path d="M20 10v16M13 20l7 7 7-7M12 30h16"/></svg>Download<br>imediato</div>
-              <div class="feat"><svg viewBox="0 0 40 40" fill="none" stroke="#7b3a1d" stroke-width="2"><rect x="4" y="6" width="22" height="28" rx="3"/><rect x="24" y="16" width="12" height="20" rx="2"/></svg>Celular, tablet<br>ou computador</div>
+              <div class="feat"><svg viewBox="0 0 40 40" fill="none" stroke="#7b3a1d" stroke-width="2"><circle cx="20" cy="20" r="18"/><path d="M15 13v14l12-7z"/></svg>Acesso imediato<br>ao curso</div>
+              <div class="feat"><svg viewBox="0 0 40 40" fill="none" stroke="#7b3a1d" stroke-width="2"><rect x="4" y="6" width="22" height="28" rx="3"/><rect x="24" y="16" width="12" height="20" rx="2"/></svg>Funciona no celular,<br>tablet ou computador</div>
               <div class="feat"><svg viewBox="0 0 40 40" fill="none" stroke="#7b3a1d" stroke-width="2"><circle cx="20" cy="20" r="18"/><path d="M20 20c-3-4-9-4-9 0s6 4 9 0 9-4 9 0-6 4-9 0Z"/></svg>Acesso<br>vitalício</div>
             </div>
             <div class="bf-price" id="valor-livro"></div>
           </div>
         </article>
+      </div>
+      <p class="highlight reveal" style="max-width:800px">O curso abre a sua consciência. O livro transforma essa consciência em hábito. Juntos, eles são o ensaio da vida que você sempre desejou.</p>
+
+      <div class="combo-box reveal">
+        <div class="bf-tag" aria-label="Black Friday"><div class="outer"><div class="inner"><span class="l1">Black</span><span class="l2">Friday</span></div></div></div>
+        <div class="combo-prices">
+          <div class="lbl">Valor total: de <s data-p="combo-de"></s></div>
+          <div class="lbl">Hoje, na Black Friday:</div>
+          <div class="now" data-p="combo-por"></div>
+          <div class="brush">Combo imperdível · 40% OFF</div>
+        </div>
+        <a class="cta pulse" href="https://pay.hotmart.com/C108294295A" data-checkout><svg><use href="#i-clock"/></svg><span>Quero o combo<br>com 40% OFF</span></a>
       </div>
     </div>
   </section>
@@ -636,7 +683,6 @@
   <section class="bg-cream2">
     <div class="wrap">
       <div class="center">
-        <div class="kicker">Faça o teste</div>
         <h2 class="sec">Este combo é <span class="b">para você?</span></h2>
         <p class="sec-sub">Seja honesta com você mesma e veja de que lado você está.</p>
       </div>
@@ -644,7 +690,7 @@
         <div class="box yes reveal">
           <h3>É para você se…</h3>
           <ul class="checks">
-            <li>Quer uma casa mais leve, organizada e acolhedora de verdade</li>
+            <li>Quem quer mudar de vida, e não só de ambiente</li>
             <li>Cansou de soluções rápidas que não se sustentam</li>
             <li>Busca mais presença, foco e bem-estar no dia a dia</li>
             <li>Quer que o seu lar reflita os seus valores e a sua família</li>
@@ -689,7 +735,8 @@
   <section class="bg-dark" id="oferta">
     <div class="wrap center">
       <div class="bf-tag" aria-label="Black Friday"><div class="outer"><div class="inner"><span class="l1">Black</span><span class="l2">Friday</span></div></div></div>
-      <h2 class="sec" style="margin-top:30px">Condição <span class="b">exclusiva</span><br>por tempo limitado</h2>
+      <h2 class="sec" style="margin-top:30px">Esta condição <span class="b">não vai se repetir.</span></h2>
+      <p class="sec-sub urg-text">O combo com 40% OFF fica disponível só até <b data-fim></b>. Depois disso, curso e livro voltam a ser vendidos separadamente, pelo valor cheio.</p>
 
       <div class="countdown" data-countdown>
         <div class="cd"><b data-cd="d">00</b><small>dias</small></div>
@@ -707,15 +754,13 @@
           <div class="total">
             <div class="from" id="price-from"></div>
             <div class="inst" id="price-inst"></div>
-            <div class="cash" id="price-cash"></div>
             <div class="save" id="price-save"></div>
           </div>
           <a class="cta pulse" href="https://pay.hotmart.com/C108294295A" data-checkout>
             <svg><use href="#i-clock"/></svg>
-            <span>Quero o combo agora!<small>Acesso imediato após a confirmação</small></span>
+            <span>Garantir meu combo<br>com 40% OFF</span>
           </a>
-          <div class="pay"><span>PIX</span><span>Cartão de crédito</span></div>
-          <div class="safe"><svg><use href="#i-lock"/></svg> Pagamento 100% seguro</div>
+          <div class="safe"><svg><use href="#i-lock"/></svg> Acesso imediato após a confirmação · PIX ou cartão de crédito</div>
         </div>
       </div>
     </div>
@@ -727,9 +772,9 @@
       <div class="guarantee reveal">
         <div class="seal"><div><b>7</b><span>DIAS DE<br>GARANTIA</span></div></div>
         <div>
-          <div class="kicker">Risco zero</div>
-          <h2 class="sec">Sua satisfação <span class="b">garantida</span></h2>
-          <p>Entre, assista às aulas, leia o livro e comece a aplicar. Se em até 7 dias você sentir que não é para você, basta pedir o reembolso e devolvemos 100% do valor. Sem perguntas, sem burocracia.</p>
+          <div class="kicker">Garantia de 7 dias</div>
+          <h2 class="sec">Risco zero <span class="b">para você.</span></h2>
+          <p>Entre, assista às aulas e comece a jornada. Se em até 7 dias sentir que não é para você, devolvemos 100% do valor. Sem perguntas e sem burocracia.</p>
         </div>
       </div>
     </div>
@@ -744,12 +789,12 @@
       </div>
       <div class="faq">
         <details><summary>Como recebo o curso e o livro digital?</summary><p>Logo após a confirmação do pagamento você recebe no seu e-mail os dados de acesso à área de membros, onde estão as aulas e o download do livro digital.</p></details>
-        <details><summary>Por quanto tempo terei acesso?</summary><p id="faq-acesso"></p></details>
+        <details><summary>Por quanto tempo tenho acesso?</summary><p id="faq-acesso"></p></details>
         <details><summary>Preciso gastar dinheiro com a casa para aplicar o método?</summary><p>Não. A proposta é olhar com intenção para o que você já tem. O foco está em escolhas, hábitos e organização, não em compras.</p></details>
         <details><summary>Funciona para casa pequena, alugada ou com crianças?</summary><p>Sim. A filosofia e o método se adaptam à sua realidade: tamanho da casa, rotina e família.</p></details>
         <details><summary>Quais as formas de pagamento?</summary><p>PIX ou cartão de crédito, com opção de parcelamento.</p></details>
         <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Se não fizer sentido para você, devolvemos 100% do valor.</p></details>
-        <details><summary>Até quando vale a condição de Black Friday?</summary><p id="faq-prazo"></p></details>
+        <details><summary>Até quando vale a oferta?</summary><p id="faq-prazo"></p></details>
       </div>
     </div>
   </section>
@@ -757,10 +802,14 @@
   <!-- ================= CTA FINAL ================= -->
   <section class="bg-dark final">
     <div class="wrap">
-      <h2 class="sec">Sua casa pode ser<br><span class="b">sua maior aliada</span></h2>
-      <p class="sec-sub">A decisão de começar é hoje. A condição de Black Friday não volta.</p>
+      <h2 class="sec">A vida que você deseja já está te esperando. <span class="b">Ela só precisa que você comece a ensaiá-la.</span></h2>
+      <div class="prose" style="margin:28px auto 0">
+        <p>Daqui a 30 dias, você pode estar exatamente onde está hoje, ainda esperando o momento certo.</p>
+        <p>Ou pode olhar para trás e perceber que foi aqui, dentro da sua própria casa, que a sua nova vida começou.</p>
+        <p class="highlight">A intenção é sua. A casa você já tem. O método está aqui.</p>
+      </div>
       <a class="final-img" href="https://pay.hotmart.com/C108294295A" data-checkout style="display:block"><picture><source media="(max-width: 600px)" srcset="assets/hero-mobile.jpg?v=2" width="900" height="1600"><img src="assets/hero-desktop.jpg?v=2" alt="Black Friday Casa Intencional – Combo Exclusivo Curso + Livro Digital" loading="lazy" width="1600" height="900"></picture></a>
-      <div style="margin-top:36px"><a class="cta pulse" href="https://pay.hotmart.com/C108294295A" data-checkout><svg><use href="#i-clock"/></svg><span>Aproveite a oferta<br>por tempo limitado!</span></a></div>
+      <div style="margin-top:36px"><a class="cta pulse" href="https://pay.hotmart.com/C108294295A" data-checkout><svg><use href="#i-clock"/></svg><span>Sim, quero<br>começar hoje</span></a></div>
       <div class="safe" style="color:#d9c2a8"><svg><use href="#i-lock"/></svg> Compra segura · Garantia de 7 dias</div>
     </div>
   </section>
@@ -799,7 +848,7 @@ const CONFIG = {
   parcelas: 10,
   valorParcela: null,       // valor da parcela que a Hotmart mostra (null = mostra só o preço à vista)
 
-  acesso: "O acesso é vitalício: tanto o curso quanto o livro digital são seus para sempre.",
+  acesso: "Seu acesso é vitalício.",
 
   // Conteúdo do curso (substitua pelos módulos reais)
   modulos: [
@@ -811,8 +860,7 @@ const CONFIG = {
 
   // Bio da Monica (um parágrafo por item)
   bio: [
-    "Criadora da Casa Intencional, Monica ajuda mulheres a transformarem a relação com a própria casa, para que ela deixe de ser fonte de cansaço e passe a ser aliada da vida que desejam viver.",
-    "No curso Da Filosofia ao Método, ela reúne a visão e o passo a passo que aplica e ensina, de forma leve, acolhedora e prática.",
+    "Sou Monica Pajewski. Por mais de 10 anos, como designer de interiores premiada, transformei centenas de ambientes e percebi que as mudanças mais profundas não eram nas paredes, mas nas pessoas que viviam ali. Foi assim que nasceu a Casa Intencional: uma filosofia que usa a casa como campo de treino para a sua melhor versão.",
   ],
 
   // Depoimentos reais (a seção só aparece se houver pelo menos um)
@@ -848,10 +896,9 @@ $("#offer-list").innerHTML = `
   <li><span>Curso Casa Intencional – Da Filosofia ao Método</span><s>${brl(CONFIG.valorCurso)}</s></li>
   <li><span>Livro Digital 30 Dias Intencionais</span><s>${brl(CONFIG.valorLivro)}</s></li>
   <li><span>Acesso imediato e vitalício + garantia de 7 dias</span><em class="incl">Incluso</em></li>`;
-$("#price-from").innerHTML = `De <s>${brl(total)}</s> por apenas`;
-$("#price-inst").innerHTML = CONFIG.valorParcela ? `<small>${CONFIG.parcelas}x</small> ${brl(CONFIG.valorParcela)}` : brl(CONFIG.precoBlack);
-$("#price-cash").textContent = CONFIG.valorParcela ? `ou ${brl(CONFIG.precoBlack)} à vista` : `à vista ou parcelado em até ${CONFIG.parcelas}x no cartão`;
-$("#price-save").textContent = `Economia de ${off}% na Black Friday`;
+$("#price-from").innerHTML = `De <s>${brl(total)}</s> por`;
+$("#price-inst").textContent = brl(CONFIG.precoBlack);
+$("#price-save").textContent = `${off}% OFF na Black Friday`;
 $("#sticky-price").textContent = CONFIG.valorParcela ? `${CONFIG.parcelas}x ${brl(CONFIG.valorParcela)}` : brl(CONFIG.precoBlack);
 function bfBanner(el, de, por) {
   const [int, cents] = por.toFixed(2).split(".");
@@ -863,11 +910,13 @@ bfBanner("#valor-curso", CONFIG.valorCurso, CONFIG.precoBlackCurso);
 bfBanner("#valor-livro", CONFIG.valorLivro, CONFIG.precoBlackLivro);
 
 // Conteúdo
-$("#modulos").innerHTML = CONFIG.modulos.map(m => `<li>${esc(m)}</li>`).join("");
+if ($("#modulos")) $("#modulos").innerHTML = CONFIG.modulos.map(m => `<li>${esc(m)}</li>`).join("");
 $("#bio").innerHTML = CONFIG.bio.map(p => `<p>${esc(p)}</p>`).join("");
 $("#faq-acesso").textContent = CONFIG.acesso;
 const fim = new Date(CONFIG.fimOferta);
-$("#faq-prazo").textContent = `A condição é válida até ${fim.toLocaleDateString("pt-BR", { timeZone: "America/Sao_Paulo" })} às ${fim.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "America/Sao_Paulo" })} (horário de Brasília) ou enquanto durarem as vagas.`;
+const fimTxt = `${fim.toLocaleDateString("pt-BR", { timeZone: "America/Sao_Paulo" })} às ${fim.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "America/Sao_Paulo" }).replace(":", "h")} (horário de Brasília)`;
+$("#faq-prazo").textContent = `Até ${fimTxt}. Depois, o combo sai do ar e os produtos voltam ao valor cheio.`;
+$$("[data-fim]").forEach(e => e.textContent = fimTxt);
 if (CONFIG.depoimentos.length) {
   $("#depoimentos").hidden = false;
   $("#testis").innerHTML = CONFIG.depoimentos.map(d => `<div class="testi"><div class="stars">★★★★★</div><p>“${esc(d.texto)}”</p><b>${esc(d.nome)}</b></div>`).join("");
