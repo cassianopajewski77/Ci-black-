@@ -528,6 +528,24 @@
     .hero2 .cta { font-size: 15px; }
     .hero2 .cta svg { width: 26px; height: 26px; }
   }
+
+  /* ---------- Ajustes: hero retangular, título em 3 linhas, preços riscados ---------- */
+  .hero2-img { width: 100% !important; max-width: none; border-radius: 14px; }
+  .hero2 h1.h1-3 span { display: block; white-space: nowrap; }
+  .hero2 h1.h1-3 { font-size: clamp(16px, 5vw, 40px); line-height: 1.15; max-width: none; }
+  .hero2 h1.h1-3 .red { color: var(--red); font-weight: 700; }
+  @media (min-width: 900px) {
+    .hero2-grid { grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr) !important; gap: 40px; }
+    .hero2 h1.h1-3 { font-size: clamp(18px, 1.85vw, 25px); }
+  }
+  .lines.tight p { margin-bottom: 5px !important; line-height: 1.45; }
+  /* valores "de" riscados maiores (≈60% do valor "por") */
+  .pline .de { font-size: clamp(14px, 3.4vw, 18px); }
+  .pline .de s { font-size: clamp(20px, 5.4vw, 31px); color: #8a4a35; font-weight: 800; }
+  .bf-price .txt s { font-size: clamp(24px, 3.6vw, 44px); color: #f6dcc4; line-height: 1; }
+  .combo-prices .lbl s { font-size: clamp(28px, 3.8vw, 40px); color: #f3dcc6; }
+  .bg-dark .pline .de s { color: #f3dcc6; }
+  .offer-card .pline .de s { color: #8a4a35; }
 </style>
 </head>
 <body>
@@ -551,11 +569,11 @@
     <div class="wrap hero2-grid">
       <div class="hero2-copy">
         <img class="hero2-logo" src="assets/logo-casa-intencional.png" alt="Casa Intencional" width="832" height="427">
-        <h1>Sua casa está treinando você todos os dias. <span class="b">Mas para qual vida?</span></h1>
-        <p class="hero2-sub">Transforme sua casa no campo de treinamento da sua nova versão.</p>
+        <h1 class="h1-3"><span>Sua vida é influenciada</span> <span>pela maneira como você vive</span> <span class="red">na sua casa</span></h1>
+        <p class="hero2-sub">Transforme a sua em um campo de treinamento da vida que deseja e merece.</p>
       </div>
       <div class="hero2-offer">
-        <a class="hero2-img" href="https://pay.hotmart.com/C108294295A" data-checkout><img src="assets/combo-black-friday.jpg?v=2" alt="Combo Black Friday: Curso Da Filosofia ao Método + Livro digital 30 Dias Intencionais" width="1254" height="1254" fetchpriority="high"></a>
+        <a class="hero2-img" href="https://pay.hotmart.com/C108294295A" data-checkout><img src="assets/hero-desktop.jpg?v=2" alt="Combo Black Friday Casa Intencional: Curso Da Filosofia ao Método + Livro Digital 30 Dias Intencionais" width="1600" height="900" fetchpriority="high"></a>
         <div class="seal-combo">Combo curso + livro digital</div>
         <div class="pline"><span class="de">De <s data-p="combo-de"></s></span><span class="por">por <b data-p="combo-por"></b></span></div>
         <a class="cta pulse" href="https://pay.hotmart.com/C108294295A" data-checkout><svg><use href="#i-clock"/></svg><span>Quero o combo com 40% OFF</span></a>
@@ -568,7 +586,7 @@
   <section class="bg-cream2">
     <div class="wrap prose short">
       <h2 class="sec center">Você quer mudar de vida. <span class="b">Mas algo sempre te puxa de volta?</span></h2>
-      <div class="reveal lines">
+      <div class="reveal lines tight">
         <p>Começa a dieta e abandona.</p>
         <p>Promete se cuidar e deixa para depois.</p>
         <p>Planeja uma nova rotina, e ela não passa da primeira semana.</p>
