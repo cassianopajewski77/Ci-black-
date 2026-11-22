@@ -1,6 +1,6 @@
 {
   // Cloudflare Worker que publica a landing page estática (index.html + assets/)
-  "name": "casaintencional-black",
+  "name": "casaintencional-curso",
   "compatibility_date": "2025-10-01",
   "assets": {
     "directory": "./"
