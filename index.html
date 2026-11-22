@@ -415,6 +415,43 @@
     summary { font-size: 15px; }
     .final-img { margin-top: 28px; border-radius: 18px; }
   }
+
+  /* ---------- Novas seções de texto ---------- */
+  .hero h1.h1-long { font-size: clamp(30px, 3.6vw, 46px); line-height: 1.12; color: var(--ink); max-width: 20ch; margin-left: auto; margin-right: auto; }
+  .hero h1.h1-long .b { color: var(--brown); display: inline; font-size: inherit; }
+  .hero-grid > * { min-width: 0; }
+  .hero .bf-row .brush { font-size: clamp(16px, 1.7vw, 21px); white-space: nowrap; }
+  @media (max-width: 600px) {
+    .hero .bf-row .brush { white-space: normal; font-size: 15px; padding: 8px 20px; text-align: center; }
+    .hero .pill-red { max-width: 100%; }
+  }
+  .hero-sub { font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 500; font-size: clamp(20px, 2.2vw, 25px); line-height: 1.3; color: var(--ink); margin: 0; max-width: 34ch; }
+  .hero-price { text-align: center; line-height: 1.05; }
+  .hero-price .from { font-size: 16px; font-weight: 600; color: var(--muted); }
+  .hero-price .from s { color: var(--brown); font-weight: 800; text-decoration-color: var(--red); text-decoration-thickness: 2px; }
+  .hero-price .now { font: 900 clamp(46px, 5.6vw, 64px)/1 Montserrat, sans-serif; color: var(--red-deep); margin-top: 2px; }
+  .prose { max-width: 800px; }
+  .prose h2.sec { margin: 0 0 32px; }
+  .prose p { margin: 0 0 16px; font-size: 18px; }
+  .prose em { font-family: "Cormorant Garamond", serif; font-size: 1.2em; color: var(--brown); }
+  .bg-dark .prose p { color: #f0dcc4; }
+  .bg-dark .prose strong { color: var(--gold-light); }
+  .highlight { margin: 32px auto 0 !important; padding: 22px 26px; text-align: center; border-radius: 18px;
+    font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 600; font-size: clamp(22px, 2.6vw, 28px) !important; line-height: 1.3;
+    color: var(--ink); background: #fffaf3; border: 1px solid #e6d0b6; border-left: 5px solid var(--gold); }
+  .highlight.big { font-size: clamp(34px, 5vw, 52px) !important; color: var(--brown); padding: 18px 26px; }
+  .bg-dark .highlight { background: rgba(0,0,0,.28); border-color: rgba(226,165,48,.4); border-left-color: var(--gold); color: #fff3e2 !important; }
+  .nolist { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .nolist li { display: flex; gap: 14px; align-items: flex-start; background: #fffaf3; border: 1px solid #e6d0b6; border-radius: 14px; padding: 16px 18px; font-size: 17px; }
+  .nolist svg { flex: none; width: 22px; height: 22px; margin-top: 2px; color: var(--red); }
+  @media (max-width: 600px) {
+    .prose p { font-size: 16px; }
+    .prose h2.sec { margin-bottom: 24px; }
+    .highlight { padding: 18px; }
+    .nolist li { font-size: 15px; padding: 14px; }
+    .hero h1.h1-long { font-size: 28px; }
+    .hero-sub { font-size: 20px; }
+  }
 </style>
 </head>
 <body>
@@ -429,7 +466,7 @@
 </svg>
 
 <div class="urgency" role="note">
-  BLACK FRIDAY<span class="hide-sm"> · COMBO EXCLUSIVO</span> termina em <span class="cd-inline" data-cd-inline>--</span>
+  🔥 BLACK FRIDAY<span class="hide-sm"> CASA INTENCIONAL</span> · 40% OFF · <span data-cd-label>Termina em</span> <span class="cd-inline" data-cd-inline>--</span>
 </div>
 
 <main>
@@ -440,25 +477,29 @@
         <a class="logo" href="#">
           <img src="assets/logo-casa-intencional.png" alt="Casa Intencional" width="832" height="427">
         </a>
-        <h1><span class="a">Da Filosofia</span><span class="b">ao Método</span></h1>
+        <h1 class="h1-long">Você não muda de vida fora de casa se, dentro dela, <span class="b">continua vivendo a mesma vida.</span></h1>
         <hr class="rule">
-        <p class="tagline">Sua casa como aliada<br>da vida que você deseja viver.</p>
+        <p class="hero-sub">O Casa Intencional te ensina a treinar, dentro da sua própria casa, os pensamentos, hábitos e atitudes da pessoa que você deseja se tornar.</p>
 
         <div class="bf-row">
           <div class="bf-tag" aria-label="Black Friday"><div class="outer"><div class="inner"><span class="l1">Black</span><span class="l2">Friday</span></div></div></div>
-          <div class="brush">Combo Exclusivo</div>
-          <div class="pill-red" aria-label="Curso mais Livro Digital">
+          <div class="pill-red" aria-label="Curso Da Filosofia ao Método mais Livro digital 30 Dias Intencionais">
             <svg><use href="#i-play"/></svg><span class="stack">Curso<br><span style="font-weight:600;text-transform:none;font-size:13px">Da Filosofia ao Método</span></span>
             <span class="plus">+</span>
-            <svg><use href="#i-book"/></svg><span class="stack">Livro Digital<br><span style="font-weight:600;text-transform:none;font-size:13px">30 Dias Intencionais</span></span>
+            <svg><use href="#i-book"/></svg><span class="stack">Livro digital<br><span style="font-weight:600;text-transform:none;font-size:13px">30 Dias Intencionais</span></span>
           </div>
+          <div class="hero-price">
+            <div class="from">De <s data-p="combo-de"></s> por</div>
+            <div class="now" data-p="combo-por"></div>
+          </div>
+          <div class="brush">40% OFF só nesta Black Friday</div>
         </div>
 
         <a class="cta pulse" href="https://pay.hotmart.com/C108294295A" data-checkout>
           <svg><use href="#i-clock"/></svg>
-          <span>Aproveite a oferta<br>por tempo limitado!</span>
+          <span>Quero começar<br>minha nova fase</span>
         </a>
-        <div class="safe"><svg><use href="#i-lock"/></svg> Compra 100% segura · Acesso imediato · Garantia de 7 dias</div>
+        <div class="safe">🔒 Compra segura · ✅ Acesso imediato ao curso · 🛡️ 7 dias de garantia</div>
       </div>
       <div class="hero-photo">
         <img src="assets/monica-hero.jpg" alt="Monica Pajewski, criadora da Casa Intencional" width="754" height="1254" fetchpriority="high">
@@ -467,45 +508,85 @@
     </div>
   </section>
 
-  <!-- ================= DOR ================= -->
+  <!-- ================= 3. A DOR ================= -->
   <section class="bg-cream2">
-    <div class="wrap center">
-      <div class="kicker">Você se reconhece?</div>
-      <h2 class="sec">Quando a casa <span class="b">pesa</span>,<br>a vida inteira pesa junto</h2>
-      <div class="pains">
-        <div class="pain reveal"><b>Cansaço que não passa</b><p>Você arruma, organiza, limpa… e dias depois está tudo igual. A sensação é de enxugar gelo.</p></div>
-        <div class="pain reveal"><b>Excesso de coisas</b><p>Objetos que não usa, compras por impulso e armários que não fecham roubam espaço e energia.</p></div>
-        <div class="pain reveal"><b>Falta de foco</b><p>A bagunça visual vira bagunça mental. É difícil descansar, pensar e estar presente em casa.</p></div>
-        <div class="pain reveal"><b>Casa que não é sua</b><p>Seu lar não reflete quem você é nem a vida que você quer construir com a sua família.</p></div>
+    <div class="wrap prose">
+      <h2 class="sec center">Você quer mudar de vida. <span class="b">Mas, no fundo, sente que alguma coisa sempre te puxa de volta.</span></h2>
+      <div class="reveal">
+        <p>Você sonha com uma vida mais leve, mais próspera e mais bonita. Quer ser mais saudável, ter mais energia, ser respeitada, admirada e amada.</p>
+        <p>Mas os dias passam, e tudo continua igual.</p>
+        <p>Você começa a dieta e abandona. Promete que vai se cuidar e deixa para depois. Planeja uma nova rotina, e na primeira semana ela já ficou para trás. E no fim do dia sobra aquela sensação silenciosa: <em>"eu sei que posso mais, mas não sei por onde começar."</em></p>
+        <p>A verdade é que isso não é falta de força de vontade.</p>
       </div>
-      <p class="turn reveal">E se a sua casa deixasse de ser mais uma tarefa <br>e passasse a ser <em>sua maior aliada</em>?</p>
+      <p class="highlight reveal">É que você está tentando viver uma vida nova com a mentalidade, os hábitos e o ambiente da vida antiga.</p>
     </div>
   </section>
 
-  <!-- ================= BENEFÍCIOS ================= -->
-  <section class="bg-dark">
-    <div class="wrap center">
-      <div class="kicker" style="color:var(--gold-light)">A transformação</div>
-      <h2 class="sec">Uma casa intencional<br>te devolve <span class="b">o que importa</span></h2>
-      <div class="benefits">
-        <div class="benefit reveal">
-          <svg viewBox="0 0 64 64" fill="none" stroke="#e2a530" stroke-width="3" stroke-linecap="round"><circle cx="30" cy="34" r="22"/><circle cx="30" cy="34" r="13"/><circle cx="30" cy="34" r="4" fill="#e2a530"/><path d="M30 34 54 10M46 10h8v8"/></svg>
-          <h3>Mais foco</h3><p>Ambientes que ajudam você a pensar com clareza.</p>
-        </div>
-        <div class="benefit reveal">
-          <svg viewBox="0 0 64 64" fill="none" stroke="#e2a530" stroke-width="3" stroke-linejoin="round"><path d="M32 50c-6-6-8-14-6-24 2-6 4-9 6-12 2 3 4 6 6 12 2 10 0 18-6 24Z"/><path d="M32 50c-8-1-15-6-18-16 6-1 11 1 14 4M32 50c8-1 15-6 18-16-6-1-11 1-14 4"/><path d="M32 50c-10 2-20-1-26-8 5-3 10-3 14-2M32 50c10 2 20-1 26-8-5-3-10-3-14-2"/></svg>
-          <h3>Mais leveza</h3><p>Menos excesso, menos peso, mais espaço para viver.</p>
-        </div>
-        <div class="benefit reveal">
-          <svg viewBox="0 0 64 64" fill="none" stroke="#e2a530" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M8 30 32 8l24 22M14 25v31h36V25"/><path d="M32 47s-10-6-10-12a5 5 0 0 1 10-1 5 5 0 0 1 10 1c0 6-10 12-10 12Z"/></svg>
-          <h3>Mais bem-estar</h3><p>Um lar acolhedor, que recarrega em vez de esgotar.</p>
-        </div>
-        <div class="benefit reveal">
-          <svg viewBox="0 0 64 64" fill="#e2a530"><rect x="8" y="42" width="8" height="14" rx="1"/><rect x="20" y="34" width="8" height="22" rx="1"/><rect x="32" y="26" width="8" height="30" rx="1"/><rect x="44" y="16" width="8" height="40" rx="1"/><path d="M8 32 30 16l8 6 16-14" fill="none" stroke="#e2a530" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M46 6h10v10z"/></svg>
-          <h3>Mais propósito</h3><p>Cada escolha da casa a serviço da vida que você deseja.</p>
-        </div>
+  <!-- ================= 4. A VERDADE ================= -->
+  <section>
+    <div class="wrap prose">
+      <h2 class="sec center">Nenhuma vida nova cabe dentro de uma <span class="b">mentalidade pequena.</span></h2>
+      <div class="reveal">
+        <p>Enquanto sua mente estiver presa na escassez, na baixa autoestima, na sensação de ser vítima das circunstâncias e no "isso não é para mim", nada muda de verdade. Pode até mudar por fora, por um tempo, mas logo volta ao que era.</p>
+        <p>Para a vida expandir, você precisa mudar primeiro o que está por dentro: seus pensamentos, seus comportamentos, seus hábitos e suas intenções.</p>
+        <p>E existe um lugar onde tudo isso aparece, todos os dias, sem filtro, sem plateia e sem máscara:</p>
       </div>
-      <div style="margin-top:48px"><a class="cta" href="https://pay.hotmart.com/C108294295A" data-checkout><svg><use href="#i-clock"/></svg><span>Quero minha casa como aliada</span></a></div>
+      <p class="highlight big reveal">a sua casa.</p>
+    </div>
+  </section>
+
+  <!-- ================= 5. OS "NÃO ADIANTA" ================= -->
+  <section class="bg-cream2">
+    <div class="wrap prose">
+      <h2 class="sec center">A vida que você vive quando ninguém está olhando é <span class="b">a vida que você realmente tem.</span></h2>
+      <ul class="nolist">
+        <li class="reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg><span>Não adianta se arrumar para sair e, dentro de casa, viver de qualquer jeito.</span></li>
+        <li class="reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg><span>Não adianta deixar a casa em ordem só quando chega visita, se em todos os outros dias você vive no caos.</span></li>
+        <li class="reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg><span>Não adianta preparar uma refeição caprichada só para os outros e, durante a semana, comer mal e às pressas.</span></li>
+        <li class="reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg><span>Não adianta comprar uma roupa bonita se, no fundo, você não cuida da sua saúde nem de você.</span></li>
+        <li class="reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg><span>Não adianta querer ser uma pessoa próspera se seus hábitos são os de quem quer muito, mas não faz o mínimo dentro da própria casa.</span></li>
+      </ul>
+      <p class="highlight reveal">Quem adia a rotina básica dificilmente cresce no resto da vida. Porque a forma como você vive em casa é a forma como você vive tudo.</p>
+    </div>
+  </section>
+
+  <!-- ================= 6. TUDO É TREINÁVEL ================= -->
+  <section>
+    <div class="wrap prose">
+      <h2 class="sec center">Ninguém chega preparado ao grande momento <span class="b">sem antes ter ensaiado.</span></h2>
+      <div class="reveal">
+        <p>Um time treina as jogadas muitas vezes antes de entrar no campeonato.</p>
+        <p>Uma banda ensaia o show inteiro antes de subir ao palco.</p>
+        <p>Toda pessoa que viveu um momento importante, e brilhou nele, praticou antes.</p>
+        <p>Com a vida é igual. Tudo é treinável: <strong>autoestima, disciplina, amor-próprio, merecimento, gratidão, elegância, saúde e prosperidade.</strong></p>
+      </div>
+      <p class="highlight reveal">A pergunta é: onde você está treinando a sua próxima versão?</p>
+    </div>
+  </section>
+
+  <!-- ================= 7. A CASA COMO CAMPO DE TREINO ================= -->
+  <section class="bg-dark">
+    <div class="wrap prose">
+      <h2 class="sec center">Tudo é treinável. E a sua casa é <span class="b">o seu campo de treino.</span></h2>
+      <div class="reveal">
+        <p>É dentro de casa que você ensaia, todos os dias, quem você está se tornando.</p>
+        <p><strong>Quer se sentir mais saudável, mais jovem e mais bonita?</strong> Treine em casa as atitudes de quem já vive assim.</p>
+        <p><strong>Quer ser respeitada, admirada e amada?</strong> Desenvolva em casa o amor-próprio, o merecimento e a gratidão que sustentam essa nova personalidade.</p>
+        <p><strong>Quer prosperar?</strong> Pratique em casa os hábitos de quem constrói, não os de quem só deseja.</p>
+      </div>
+      <p class="highlight reveal">A casa é a maior ferramenta de transformação que você tem nas mãos neste momento. Ela está com você todos os dias, esperando ser usada com intenção.</p>
+      <div class="center" style="margin-top:36px"><a class="cta" href="https://pay.hotmart.com/C108294295A" data-checkout><svg><use href="#i-clock"/></svg><span>Quero transformar minha casa<br>no meu campo de treino</span></a></div>
+    </div>
+  </section>
+
+  <!-- ================= 8. NÃO É SOBRE ARRUMAR A CASA ================= -->
+  <section class="bg-cream2">
+    <div class="wrap prose">
+      <h2 class="sec center">Não é sobre arrumar a casa. <span class="b">É sobre se adaptar a uma nova realidade.</span></h2>
+      <div class="reveal">
+        <p>Quando você passa a viver numa casa cuidada, com intenção, algo muda dentro de você. Você começa a se acostumar com um padrão de vida que combina com a próxima fase que deseja viver.</p>
+        <p>Uma vida de abundância em todas as áreas só acontece quando o ambiente contribui para o seu desenvolvimento.</p>
+      </div>
     </div>
   </section>
 
@@ -791,6 +872,8 @@ if (CONFIG.depoimentos.length) {
   $("#depoimentos").hidden = false;
   $("#testis").innerHTML = CONFIG.depoimentos.map(d => `<div class="testi"><div class="stars">★★★★★</div><p>“${esc(d.texto)}”</p><b>${esc(d.nome)}</b></div>`).join("");
 }
+$$("[data-p=combo-de]").forEach(e => e.textContent = brl(CONFIG.valorCurso + CONFIG.valorLivro));
+$$("[data-p=combo-por]").forEach(e => e.textContent = brl(CONFIG.precoBlack));
 $$("[data-year]").forEach(e => e.textContent = new Date().getFullYear());
 
 // Contagem regressiva
@@ -804,8 +887,9 @@ function tick() {
   $$("[data-cd=m]").forEach(e => e.textContent = pad(m));
   $$("[data-cd=s]").forEach(e => e.textContent = pad(s));
   const ended = fim - Date.now() <= 0;
-  $$("[data-cd-inline]").forEach(e => e.textContent = ended ? "oferta encerrada" : `${d > 0 ? d + "d " : ""}${pad(h)}:${pad(m)}:${pad(s)}`);
-  if (ended) { $$("[data-countdown]").forEach(e => e.style.display = "none"); $$("[data-cd-note]").forEach(e => e.textContent = "A oferta de Black Friday foi encerrada."); }
+  $$("[data-cd-label]").forEach(e => e.hidden = ended);
+  $$("[data-cd-inline]").forEach(e => e.textContent = ended ? "Oferta encerrada" : `${d > 0 ? d + "d " : ""}${pad(h)}:${pad(m)}:${pad(s)}`);
+  if (ended) { $$("[data-countdown]").forEach(e => e.style.display = "none"); $$("[data-cd-note]").forEach(e => e.textContent = "Oferta encerrada"); }
 }
 tick(); setInterval(tick, 1000);
 
